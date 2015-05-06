@@ -1,0 +1,5 @@
+D:\proj\Longgan\Longgan.DataAccess\bin\Debug\Longgan.DataAccess.dll
+D:\proj\Longgan\Longgan.DataAccess\bin\Debug\Longgan.DataAccess.pdb
+D:\proj\Longgan\Longgan.DataAccess\obj\Debug\Longgan.DataAccess.csprojResolveAssemblyReference.cache
+D:\proj\Longgan\Longgan.DataAccess\obj\Debug\Longgan.DataAccess.dll
+D:\proj\Longgan\Longgan.DataAccess\obj\Debug\Longgan.DataAccess.pdb
