@@ -1,5 +1,0 @@
-D:\proj\Longgan\Longgan.Models\bin\Debug\Longgan.Models.dll
-D:\proj\Longgan\Longgan.Models\bin\Debug\Longgan.Models.pdb
-D:\proj\Longgan\Longgan.Models\obj\Debug\Longgan.Models.csprojResolveAssemblyReference.cache
-D:\proj\Longgan\Longgan.Models\obj\Debug\Longgan.Models.dll
-D:\proj\Longgan\Longgan.Models\obj\Debug\Longgan.Models.pdb
