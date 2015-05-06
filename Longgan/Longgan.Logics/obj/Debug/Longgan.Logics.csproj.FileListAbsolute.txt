@@ -1,0 +1,4 @@
+D:\proj\Longgan\Longgan.Logics\bin\Debug\Longgan.Logics.dll
+D:\proj\Longgan\Longgan.Logics\bin\Debug\Longgan.Logics.pdb
+D:\proj\Longgan\Longgan.Logics\obj\Debug\Longgan.Logics.dll
+D:\proj\Longgan\Longgan.Logics\obj\Debug\Longgan.Logics.pdb
