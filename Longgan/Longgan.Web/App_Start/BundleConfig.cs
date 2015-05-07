@@ -21,15 +21,19 @@ namespace Longgan.Web
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
+                      "~/Scripts/retina-1.1.0.js",
+                      "~/Scripts/jquery.unveilEffects.min.js",
+                      "~/Scripts/jetmenu.js",
+                      "~/Scripts/jquery.isotope.min.js",
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/style.css"));
 
             // Set EnableOptimizations to false for debugging. For more information,
             // visit http://go.microsoft.com/fwlink/?LinkId=301862
-            BundleTable.EnableOptimizations = true;
+            //BundleTable.EnableOptimizations = true;
         }
     }
 }
