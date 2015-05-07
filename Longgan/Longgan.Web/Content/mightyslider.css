@@ -1,0 +1,46 @@
+/* Import Skins */
+
+/* Slider Skins */
+@import url('slider_skins/windows8/style.css');
+@import url('slider_skins/modern/style.css');
+@import url('slider_skins/fullscreen/style.css');
+
+/* Carousel Skins */
+@import url('carousel_skins/simple/style.css');
+@import url('carousel_skins/modern/style.css');
+@import url('carousel_skins/coverflow/style.css');
+
+/* Tabs Skins */
+@import url('tabs_skins/white/style.css');
+@import url('tabs_skins/crystal/style.css');
+@import url('tabs_skins/silver/style.css');
+@import url('tabs_skins/blue/style.css');
+@import url('tabs_skins/black/style.css');
+@import url('tabs_skins/black_glass/style.css');
+@import url('tabs_skins/green/style.css');
+@import url('tabs_skins/green_glass/style.css');
+
+.mightyslider_carouselSimple_skin .mSClose,
+	.mightyslider_carouselSimple_skin .mSLink,
+	.mightyslider_carouselSimple_skin .mSVideo, 
+	.mightyslider_carouselSimple_skin .mSFlash,
+	.mightyslider_carouselSimple_skin .mSButtons {background-color:#333;}
+/* Global Styles */
+.isInFullScreen {
+	position: fixed !important;
+	top: 0 !important;
+	left: 0 !important;
+	right: 0 !important;
+	bottom: 0 !important;
+	width: 100% !important;
+	height: 100% !important;
+	margin: auto !important;
+	z-index: 10000 !important;
+}
+
+.mSCaption {
+	-webkit-transform: translateZ(0);
+	   -moz-transform: translateZ(0);
+	    -ms-transform: translateZ(0);
+			transform: translateZ(0);
+}
