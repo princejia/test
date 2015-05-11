@@ -25,7 +25,8 @@ namespace Longgan.Web
                       "~/Scripts/jquery.unveilEffects.min.js",
                       "~/Scripts/jetmenu.js",
                       "~/Scripts/jquery.isotope.min.js",
-                      "~/Scripts/respond.js"));
+                      "~/Scripts/respond.js",
+                      "~/Scripts/application.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
