@@ -956,7 +956,7 @@
 	}
 	.theme-default .nivoSlider {
 		position:relative;
-		background:#fff url(images/loading-nivo.gif) no-repeat 50% 50%;
+		background:#fff url(../images/loading-nivo.gif) no-repeat 50% 50%;
 		margin-bottom:0;
 		pading:0;
 	}
@@ -980,7 +980,7 @@
 		display:inline-block;
 		width:22px;
 		height:22px;
-		background:url(images/bullets.png) no-repeat;
+		background:url(../images/bullets.png) no-repeat;
 		text-indent:-9999px;
 		border:0;
 		margin: 0 2px;
@@ -993,7 +993,7 @@
 		display:block;
 		width:25px;
 		height:71px;
-		background:url(images/arrows.png) no-repeat;
+		background:url(../images/arrows.png) no-repeat;
 		text-indent:-9999px;
 		border:0;
 		opacity: 0;
@@ -1235,10 +1235,10 @@
 	
 	/* Direction Nav */
 	.flex-direction-nav li a {width:45px; height:42px; margin:0; display: block; position: absolute; left:11px; cursor: pointer; text-indent: -9999px;}
-	.flex-direction-nav li a.next {background:url(images/next.png) no-repeat center #ffffff; bottom:41px;}
-	.flex-direction-nav li a.prev {background:url(images/prev.png) no-repeat center #ffffff;bottom:84px;}
-	.flex-direction-nav li a.next:hover {background:url(images/next_a.png) no-repeat center #1a1a1a;}
-	.flex-direction-nav li a.prev:hover {background:url(images/prev_a.png) no-repeat center #1a1a1a;}
+	.flex-direction-nav li a.next {background:url(../images/next.png) no-repeat center #ffffff; bottom:41px;}
+	.flex-direction-nav li a.prev {background:url(../images/prev.png) no-repeat center #ffffff;bottom:84px;}
+	.flex-direction-nav li a.next:hover {background:url(../images/next_a.png) no-repeat center #1a1a1a;}
+	.flex-direction-nav li a.prev:hover {background:url(../images/prev_a.png) no-repeat center #1a1a1a;}
 	.flex-direction-nav li a.disabled {opacity: .3; filter:alpha(opacity=30); cursor: default;}
 	
 	/* Control Nav */
@@ -1253,8 +1253,8 @@
 	.slider_container{ width:100%; margin:0 0 0; clear:both; background:none; padding:30px 0 0 0;}
 	.flexslider {width: 100%; margin: 0; padding:0 0 30px 0;background:none;}
 	.flex-direction-nav li a {width:45px; height:42px; margin:0; display: block; position: absolute; right:10px; cursor: pointer; text-indent: -9999px;}
-	.flex-direction-nav li a.next {background:url(images/next.png) no-repeat center; bottom:85px;}
-	.flex-direction-nav li a.prev {background:url(images/prev.png) no-repeat center;bottom:40px;}
+	.flex-direction-nav li a.next {background:url(../images/next.png) no-repeat center; bottom:85px;}
+	.flex-direction-nav li a.prev {background:url(../images/prev.png) no-repeat center;bottom:40px;}
 	.flex-caption { display:none;}
 	}
 
@@ -1309,7 +1309,7 @@
 	}
 
 	.overlay {
-		background: url(images/pattern.png);
+		background: url(../images/pattern.png);
 		width: 100%;
 		height:100%;
 		overflow:hidden;
@@ -1452,7 +1452,7 @@
 	}
 	
 	.dmtop {
-		background-image: url(images/arrow.png);
+		background-image: url(../images/arrow.png);
 		background-position: 50% 50%;
 		background-repeat: no-repeat;
 		z-index: 9999;
@@ -1488,7 +1488,7 @@
 		position:absolute;
 		left:50%; /* centers the loading animation horizontally one the screen */
 		top:50%; /* centers the loading animation vertically one the screen */
-		background-image:url(images/loading.gif); /* path to your loading animation */
+		background-image:url(../images/loading.gif); /* path to your loading animation */
 		background-repeat:no-repeat;
 		background-position:center;
 		margin:-100px 0 0 -100px; /* is width and height divided by two */
@@ -1577,7 +1577,7 @@
 	}
 	
 	.image-container .zoom {
-		background:url(images/magnifier.png) no-repeat center;
+		background:url(../images/magnifier.png) no-repeat center;
 		position:absolute;
 		top:20px;
 		left:20px;
@@ -1687,7 +1687,7 @@
 	  position: relative;
 	  padding: 0px;
 	  list-style-type: none;
-	  background: url(images/timeline.png);
+	  background: url(../images/timeline.png);
 	  background-repeat: repeat-y;
 	  background-position: 50% 0;
 	}
@@ -2000,7 +2000,7 @@
 	#sidebar .pages li,
 	#sidebar .categories li {
 		-moz-box-sizing: border-box;
-		background: url(images/li.png) no-repeat scroll left center rgba(0, 0, 0, 0);
+		background: url(../images/li.png) no-repeat scroll left center rgba(0, 0, 0, 0);
 		float: left;
 		padding-bottom: 5px;
 		padding-left: 15px;
@@ -2026,7 +2026,7 @@
 	}
 	
 	#sidebar #s {
-		background: url(images/search.png) no-repeat scroll 94% center rgba(0, 0, 0, 0);
+		background: url(../images/search.png) no-repeat scroll 94% center rgba(0, 0, 0, 0);
 		height: 30px;
 		margin: 30px 0 0;
 		width: 100%;
@@ -2157,7 +2157,7 @@
 
 	.tweets li .content {padding:0 30px 0;}
 	.tweets li span {
-		background-image: url(images/tweet.png);
+		background-image: url(../images/tweet.png);
 		background-repeat: no-repeat;
 		display: inline-block;
 		left: 40px;
@@ -2165,7 +2165,7 @@
 	}
 	
 	.general-title {
-		background: url(images/title.gif) repeat-x scroll 0 7px #FFFFFF;
+		background: url(../images/title.gif) repeat-x scroll 0 7px #FFFFFF;
 		font-size: 16px;
 		font-weight: 600;
 		margin-bottom:20px;
@@ -2634,7 +2634,7 @@
 	}
 	
 	.og-close {
-		background-image: url(images/cross.png);
+		background-image: url(../images/cross.png);
 		background-position: 50% 50%;
 		background-repeat: no-repeat;
 		cursor: pointer;
@@ -3026,14 +3026,14 @@
 			width:12px;
 			height:14px;
 			display: block;
-			background:url(images/star-on.png) no-repeat left top;
+			background:url(../images/star-on.png) no-repeat left top;
 		}
 	
 	.rating i.star-off {
 		width:12px;
 		height:14px;
 		display: block;
-		background:url(images/star-off.png) no-repeat left top;
+		background:url(../images/star-off.png) no-repeat left top;
 	}
 	
 	.shopping-cart-widget li {
@@ -3410,7 +3410,7 @@
 	}
 	
 	.shadow {
-		background: url(images/singleheader.png) no-repeat scroll center -8px;
+		background: url(../images/singleheader.png) no-repeat scroll center -8px;
 		top: 0;
 		content: "";
 		height: 20px;
