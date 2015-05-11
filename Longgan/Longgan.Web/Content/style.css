@@ -3532,8 +3532,9 @@
 	
 /* 12. COLOR SCHEMES
 ================================================== */
+		/* COLOR SCHEMES */
 	.portfolio-columns > a > div, .portfolio-item > a > div, .og-grid li > a > div, .effect-icona .zoomcon-enlarge {
-		background-color: rgba(181, 67, 33, 0.8);
+		background-color: rgba(40, 157, 204, 0.8);
 	}
 	
 	#videoslide .tabs ul li.active,
@@ -3608,7 +3609,7 @@
 	.accordion-toggle em,
 	.progress-bar-primary,
 	.service-box i {
-		background-color:#B54321 !important;
+		background-color:#289DCC !important;
 	}
 
 	.navbar-inverse .dropdown-menu > li > a:hover,
@@ -3645,7 +3646,7 @@
 	.jetmenu li > .megamenu h5,
 	.tp-caption.large_bold_grey span,
 	.jetmenu li > .megamenu a:hover {
-		color:#B54321;
+		color:#289DCC;
 	}
 
 	.jetmenu > li > .megamenu,
@@ -3662,7 +3663,7 @@
 	.navbar-inverse .navbar-nav > .active > a:hover,
 	.navbar-default .navbar-nav > .active > a:focus,
 	.navbar-inverse .navbar-nav > .active > a:focus {
-	  border-bottom-color: #B54321;
+	  border-bottom-color: #289DCC;
 	}
 	
 	blockquote,
@@ -3672,13 +3673,13 @@
 	.nav-tabs.nav-stacked > .active > a,
 	.nav-tabs.nav-stacked > .active > a:hover,
 	.nav-tabs.nav-stacked > .active > a:focus {
-	  border-left-color: #B54321;
+	  border-left-color: #289DCC;
 	}
 
 	.nav .caret,
 	.nav a:hover .caret {
-	  border-top-color: #B54321;
-	  border-bottom-color: #B54321;
+	  border-top-color: #289DCC;
+	  border-bottom-color: #289DCC;
 	}
 	
 	a:hover,
@@ -3702,38 +3703,17 @@
 	.timeline .event:after,
 	.team-box img,
 	.form-control:focus {
-	  border-color: #B54321;
+	  border-color: #289DCC;
 	}
 	#countdown .stat,
 	#maintenance .copyright-wrapper,
 	.topbar {
-	border-top-color: #B54321;
+	border-top-color: #289DCC;
 	}
-	
 	blockquote.pull-right {
-	  border-right-color: #B54321;
+	  border-right-color: #289DCC;
 	}
- 
-	a.list-group-item.active .list-group-item-text {
-	  color: #efefef;
-	}
-	.btn-primary {
-	  color: #ffffff;
-	  border-color: transparent;
-	}
-	
-	.required {
-		font-weight:700;
-	}
-	
-	.onsale:hover,
-	.btn-primary:hover,
-	.btn-primary:focus,
-	.btn-primary:active,
-	.btn-primary.active {
-	  color: #fff !important;
-	  background-color: #444444 !important;
-	}
+
 
 /* 13. RESPONSIVE STYLES
 ================================================== */	
