@@ -434,8 +434,7 @@
 	a.cssLogo {
 		margin: 0;
 		padding: 0;
-		text-shadow: none;
-		width: 164px;
+		text-shadow: none;		
 		display: block;
 	}
 	
@@ -3509,7 +3508,6 @@
 		background:#2a2a2a;
 		position:relative;
 		width:100%;
-		min-height:350px;
 		margin:0;
 		padding:20px 0;
 	}
