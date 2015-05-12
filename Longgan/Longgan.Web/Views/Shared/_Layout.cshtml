@@ -7,7 +7,8 @@
     <meta name="keywords" content="苏州陇赣机电工程有限公司,陇赣机电工程有限公司,苏州陇赣机电,陇赣机电工程" />
     <title>苏州陇赣机电工程有限公司</title>
     @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/Content/rs-plugin")
+
 
 </head>
 <body>
@@ -80,9 +81,8 @@
 
             </div>
         </header><!-- /header wrapper -->
-        <div class="container body-content">
-            @RenderBody()
-        </div>
+        @RenderBody()
+
         <footer class="footer-wrapper">
             <div class="container">
                 <div class="col-lg-8 col-md-8 col-sm-10">
@@ -129,9 +129,28 @@
         </div>
         <div class="dmtop">Scroll to Top</div>
     </div><!-- /wrapper -->
-    </div>
+    @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/rs-plugin")
     @RenderSection("scripts", required: false)
+
+    <script type="text/javascript">
+        var revapi;
+        jQuery(document).ready(function ()
+        {
+            revapi = jQuery('.tp-banner').revolution(
+             {
+                 delay: 9000,
+                 startwidth: 960,
+                 startheight: 450,
+                 hideThumbs: 10,
+                 fullWidth: "on",
+                 forceFullWidth: "on",
+                 lazyload: "on",
+                 navigationStyle: "none"
+             });
+        });
+    </script>
 </body>
 </html>
