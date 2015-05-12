@@ -28,9 +28,15 @@ namespace Longgan.Web
                       "~/Scripts/respond.js",
                       "~/Scripts/application.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/rs-plugin").Include(
+                      "~/Scripts/jquery.nivo.slider.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/style.css"));
+
+            bundles.Add(new StyleBundle("~/Content/rs-plugin").Include(
+                ));
 
             // Set EnableOptimizations to false for debugging. For more information,
             // visit http://go.microsoft.com/fwlink/?LinkId=301862

@@ -957,7 +957,7 @@
 		position:relative;
 		background:#fff url(../images/loading-nivo.gif) no-repeat 50% 50%;
 		margin-bottom:0;
-		pading:0;
+		padding:0;
 	}
 	.theme-default .nivoSlider img {
 		position:absolute;
