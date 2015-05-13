@@ -471,13 +471,13 @@
 	}
 	
 	.colon4 {
-		background:url(demos/02_slider.png) no-repeat fixed center top / cover #000000;
+		background:url(../images/02_slider.png) no-repeat fixed center top / cover #000000;
 		padding:3rem 0;
 		position:relative;
 	}
 
 	.colon5 {
-		background:url(demos/01_slider.png) no-repeat fixed center top / cover #000000;
+		background:url(../images/01_slider.png) no-repeat fixed center top / cover #000000;
 		padding:3rem 0;
 		position:relative;
 	}
@@ -506,20 +506,20 @@
 	}
 	
 	.colon7 {
-		background:url(demos/02_colon.jpg) no-repeat fixed center top / cover;
+		background:url(../images/02_colon.jpg) no-repeat fixed center top / cover;
 		background-color: rgba(0,0,0,.5);
 		padding: 0;
 		position:relative;
 	}
 
 	.colon8 {
-		background:url(demos/01_colon.jpg) no-repeat fixed center top / cover;
+		background:url(../images/01_colon.jpg) no-repeat fixed center top / cover;
 		padding:3rem 0;
 		position:relative;
 	}
 
 	.colon9 {
-		background:url(demos/02_slider.png) no-repeat fixed center top / cover;
+		background:url(../images/02_slider.png) no-repeat fixed center top / cover;
 		background-color: rgba(0,0,0,.5);
 		border-top:1px solid #F3F3F3;
 		padding: 30px 0;
@@ -535,7 +535,7 @@
 	}
 	
 	.colon11 {
-		background:url(demos/03_slider.png) no-repeat fixed center top / cover;
+		background:url(../images/03_slider.png) no-repeat fixed center top / cover;
 		background-color: rgba(0,0,0,.5);
 		padding: 0;
 		position:relative;
@@ -551,7 +551,7 @@
 	}
 
 	.colon13 {
-		background:url(demos/01_colon.jpg) no-repeat fixed center top / cover;
+		background:url(../images/01_colon.jpg) no-repeat fixed center top / cover;
 		background-color: rgba(0,0,0,.5);
 		padding:0;
 		margin:0;
@@ -569,7 +569,7 @@
 	}
 
 	.colon15 {
-		background:url(demos/colon12.jpg) no-repeat fixed center top / cover;
+		background:url(../images/colon12.jpg) no-repeat fixed center top / cover;
 		background-color: rgba(0,0,0,.5);
 		padding: 10px 0;
 		margin:0;
@@ -3401,7 +3401,7 @@
 
 	.singleheader {
 		display: block;
-		background:url(demos/02_slider.png) no-repeat fixed center top / cover;
+		background:url(../images/02_slider.png) no-repeat fixed center top / cover;
 		position: relative;
 		top: 0;
 		padding:40px 0 45px;
