@@ -1,17 +1,141 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=DtGomKiC2t3gO0DikMIjFtHz"></script>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+<div id="wrapper">
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+    <div class="singleheader">
+        <div class="container">
+            <div class="col-lg-6 col-sm-6 col-md-6">
+                <div class="single-title">
+                    <h3>联系我们</h3>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-md-6">
+                <div class="breadcrumb-container">
+                    <ul class="breadcrumb">
+                        <li><a href="#">首页</a></li>                        
+                        <li class="active">联系我们</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="shadow"></div>
+    </div>
+
+    <section class="colon14">
+        <div class="container general">
+
+            <div id="content" class="single col-lg-12 col-md-12 col-sm-12">
+
+                <div style="height:300px" class="google-map" id="map"></div>
+
+                <div class="divider"></div>
+
+                <h3>
+                    在线留言
+                    <small> 感谢您对我们的支持，如果您对公司或者公司产品有任何意见、建议或者批评，请仔细填写以下表单，我们将会尽快处理并与您联系！</small>
+                </h3>
+
+                <hr>
+
+                <div class="col-lg-5 col-md-5 col-sm-5">
+                    <form id="#" action="#">
+                        <input type="text" class="form-control" placeholder="姓名">
+                        <br>
+                        <input type="text" class="form-control" placeholder="电话">
+                        <br>
+                        <input type="text" class="form-control" placeholder="邮箱">                        
+                        <br>
+                        <input type="text" class="form-control" placeholder="所在地址">
+                        <br>
+                        <textarea class="form-control" placeholder="您的问题" rows="5"></textarea>
+                        <br>
+                        <button class="btn btn-primary"><i class="icon-envelope-alt"></i> 我要提交</button>
+                    </form>
+                    <br>
+                </div>
+
+                <div class="col-lg-7 col-md-7 col-sm-7">
+                    <p> 苏州陇赣机电工程有限公司是一家专注於苏州本土的新能源科技公司；从2005年至今公司已经在苏州市场走过了十一个春秋；是空气能热泵本地区的见证者与领导者，拥有丰富的专业人才及雄厚的技术力量，公司从产品的研发，设计，安装及售后均处於同行业的前列；已经在苏州地区拥有八百多家的忠实用户：涵盖工厂宿舍；酒店宾馆，别墅及住宅小区，数年的光阴检验着我们优质的产品及全方位的专业关怀。</p>
+                    <p> 我们为用户精挑细选优质的产品及配件，把好质量的每一关；为用户创造实实在在的价值，我们与您一道谱写美好的明天；有您苏州的天会更蓝，更美，更环保。</p>
+                    <br />
+                    <ul class="contact-details" style="padding-left:10px;">
+                        <li><strong>地址:</strong> 苏州高新区横塘好易家4幢288号</li>
+                        <li><strong>电话:</strong> 0512-65653142</li>
+                        <li><strong>卢经理:</strong> 13812755349</li>   
+                        <li><strong>王经理:</strong> 15050101075</li>                    
+                    </ul>
+                    
+                </div>
+
+
+                <div class="clearfix"></div>
+
+
+            </div><!-- end content -->
+        </div><!-- end container -->
+
+    </section>
+</div>
+
+    <script type="text/javascript">
+        //创建和初始化地图函数：
+        function initMap() {
+            createMap();//创建地图
+            setMapEvent();//设置地图事件
+            addMapControl();//向地图添加控件
+            addMapOverlay();//向地图添加覆盖物
+        }
+        function createMap() {
+            map = new BMap.Map("map");
+            map.centerAndZoom(new BMap.Point(120.585816, 31.272611), 16);
+        }
+        function setMapEvent() {
+            map.enableScrollWheelZoom();
+            map.enableKeyboard();
+            map.enableDragging();
+            map.enableDoubleClickZoom()
+        }
+        function addClickHandler(target, window) {
+            target.addEventListener("click", function () {
+                target.openInfoWindow(window);
+            });
+        }
+        function addMapOverlay() {
+            var markers = [
+              { content: "苏州陇赣机电工程有限公司", title: "陇赣机电", imageOffset: { width: -23, height: -46 }, position: { lat: 31.270913, lng: 120.585061 } }
+            ];
+            for (var index = 0; index < markers.length; index++) {
+                var point = new BMap.Point(markers[index].position.lng, markers[index].position.lat);
+                var marker = new BMap.Marker(point, {
+                    icon: new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png", new BMap.Size(20, 25), {
+                        imageOffset: new BMap.Size(markers[index].imageOffset.width, markers[index].imageOffset.height)
+                    })
+                });
+                var label = new BMap.Label(markers[index].title, { offset: new BMap.Size(25, 5) });
+                var opts = {
+                    width: 200,
+                    title: markers[index].title,
+                    enableMessage: false
+                };
+                var infoWindow = new BMap.InfoWindow(markers[index].content, opts);
+                marker.setLabel(label);
+                addClickHandler(marker, infoWindow);
+                map.addOverlay(marker);
+            };
+        }
+        //向地图添加控件
+        function addMapControl() {
+            var scaleControl = new BMap.ScaleControl({ anchor: BMAP_ANCHOR_BOTTOM_LEFT });
+            scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+            map.addControl(scaleControl);
+            var navControl = new BMap.NavigationControl({ anchor: BMAP_ANCHOR_TOP_LEFT, type: BMAP_NAVIGATION_CONTROL_LARGE });
+            map.addControl(navControl);
+            var overviewControl = new BMap.OverviewMapControl({ anchor: BMAP_ANCHOR_BOTTOM_RIGHT, isOpen: true });
+            map.addControl(overviewControl);
+        }
+        var map;
+        initMap();
+    </script>
