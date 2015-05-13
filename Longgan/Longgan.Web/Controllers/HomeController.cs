@@ -26,5 +26,19 @@ namespace Longgan.Web.Controllers
 
             return View();
         }
+
+        public ActionResult Message()
+        {
+            ViewBag.Message = "Your contact page.";
+
+            return View();
+        }
+
+        public ActionResult Advantage()
+        {
+            ViewBag.Message = "Your Advantage page.";
+
+            return View();
+        }
     }
 }
