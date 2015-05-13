@@ -33,7 +33,6 @@
             </div>
         </div>
     </div>
-    <div class="divider"></div>
 </section>
 
 <section class="colon3">
@@ -42,9 +41,25 @@
             <h2>产品展示</h2>
         </div>
 
-        @for (int i = 1; i <= 12; i++)
+        @for (int i = 1; i <= 8; i++)
         {
             string imgUrl = string.Format("~/images/mc{0}.png", i.ToString());
+
+            <div class="col-lg-3 col-md-3 col-sm-6" data-effect="slide-bottom">
+                <div class="gallery-box">
+                    <a href="@Url.Content(@imgUrl)" class="zoombox effect-icona" data-biggallery="gallery4" data-biggallerythumbnail="@Url.Content(@imgUrl)">
+                        <img src="@Url.Content(@imgUrl)" alt="">
+                    </a>
+                    <div class="gallery-box-titles">
+                        <h3>From Island</h3>
+                    </div><!-- gallery-box-titles -->
+                </div>
+            </div>
+        }
+
+        @for (int i = 9; i <= 12; i++)
+        {
+            string imgUrl = string.Format("~/images/mc{0}.jpg", i.ToString());
 
             <div class="col-lg-3 col-md-3 col-sm-6" data-effect="slide-bottom">
                 <div class="gallery-box">
@@ -60,7 +75,5 @@
             </div>
         }
 
-
     </div>
-    <div class="divider"></div>
 </section>

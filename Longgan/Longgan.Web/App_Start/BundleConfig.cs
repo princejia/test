@@ -29,7 +29,9 @@ namespace Longgan.Web
                       "~/Scripts/application.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/rs-plugin").Include(
-                      "~/Scripts/jquery.nivo.slider.js"));
+                      "~/Scripts/jquery.nivo.slider.js",
+                      "~/Scripts/zoombox.js"
+                      ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",

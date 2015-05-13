@@ -141,7 +141,7 @@
     @RenderSection("scripts", required: false)
 
     <script type="text/javascript">
-       
+
         jQuery(document).ready(function ()
         {
             $('#slider').nivoSlider({
@@ -167,7 +167,11 @@
                 afterLoad: function () { }         // Triggers when slider has loaded
             });
 
+            $(".zoombox").zoomBox({
+                extra_classes: 'nobtnsocial nobtnclose'
+            });
         });
     </script>
+
 </body>
 </html>
