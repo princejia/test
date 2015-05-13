@@ -44,12 +44,12 @@
 
         @for (int i = 1; i <= 12; i++)
         {
-            string imgUrl = string.Format("../images/mc{0}.png", i.ToString());
+            string imgUrl = string.Format("~/images/mc{0}.png", i.ToString());
 
             <div class="col-lg-3 col-md-3 col-sm-6" data-effect="slide-bottom">
                 <div class="gallery-box">
-                    <a href="@imgUrl" class="zoombox effect-icona" data-biggallery="gallery4" data-biggallerythumbnail="@imgUrl">
-                        <img src="@imgUrl" alt="">
+                    <a href="@Url.Content(@imgUrl)" class="zoombox effect-icona" data-biggallery="gallery4" data-biggallerythumbnail="@Url.Content(@imgUrl)">
+                        <img src="@Url.Content(@imgUrl)" alt="">
                     </a>
 
 
