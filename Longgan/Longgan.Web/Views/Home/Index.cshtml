@@ -9,7 +9,58 @@
             <img src="~/images/move2.jpg" data-thumb="~/images/move2.jpg" alt="" />
             <img src="~/images/move3.jpg" data-thumb="~/images/move3.jpg" alt="" data-transition="slideInLeft" />
         </div>
+    </div>
+</section>
+
+<section class="colon10">
+    <div class="container">
+        <div class="divider"></div>
+        <div class="col-lg-6 col-md-6 col-sm-6" data-effect="slide-bottom">
+            <a href="#">
+                <img width="600" style="height:300px;" src="~/images/AnoutLeft.png" alt="">
+            </a>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6" data-effect="slide-bottom">
+            <div class="about-widget">
+                <header>
+                    <h3><i class="icon-home"></i> 公司简介</h3>
+                </header>
+                <p>苏州陇赣机电工程有限公司是一家专业从事别墅地源热泵安装设计维护；工业空气能风干机完美方案提供者及工厂，酒店宾馆，医院学校宿舍企事业单位集中供热的优质服务商。</p>
+
+                <p>公司拥有丰富的专业人才及雄厚的技术力量，公司从产品的研发，设计，安装及售后均处於同行业的前列；已经在苏州地区拥有八百多家的忠实用户：涵盖工厂宿舍；酒店宾馆，别墅及住宅小区...</p>
+
+                <a class="btn btn-primary" href="#">更多</a>
+            </div>
+        </div>
+    </div>
+    <div class="divider"></div>
+</section>
+
+<section class="colon3">
+    <div class="container">
+        <div class="message text-center" data-effect="slide-bottom">
+            <h2>产品展示</h2>
+        </div>
+
+        @for (int i = 1; i <= 12; i++)
+        {
+            string imgUrl = string.Format("../images/mc{0}.png", i.ToString());
+
+            <div class="col-lg-3 col-md-3 col-sm-6" data-effect="slide-bottom">
+                <div class="gallery-box">
+                    <a href="@imgUrl" class="zoombox effect-icona" data-biggallery="gallery4" data-biggallerythumbnail="@imgUrl">
+                        <img src="@imgUrl" alt="">
+                    </a>
+
+
+                    <div class="gallery-box-titles">
+                        <h3>From Island</h3>
+                    </div><!-- gallery-box-titles -->
+                </div>
+            </div>
+        }
+
 
     </div>
-
+    <div class="divider"></div>
 </section>
