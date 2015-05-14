@@ -258,7 +258,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
   font-size: 14px;
   line-height: 1.666;
   color: #818181;
@@ -399,7 +399,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
   font-weight: 500;
   line-height: 1.1;
   color: #545454;
