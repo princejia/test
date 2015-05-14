@@ -40,5 +40,10 @@ namespace Longgan.Web.Controllers
 
             return View();
         }
+
+        public ActionResult News()
+        {
+            return View();
+        }
     }
 }

@@ -326,14 +326,14 @@
                     <div class="post-container">
                         <div class="image-container">
                             <a href="single-with-sidebar.html" title="">
-                                <img src="demos/06_demo.jpg" alt="">
+                                <img src="~/images/an2.jpg" alt="">
                                 <span class="zoom"></span>
                             </a>
                         </div>
                         <a href="single-with-sidebar.html" title="">
-                            <h3>Custom Design Medicine Bag Photoshop</h3>
+                            <h3>案例</h3>
                         </a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit illo voluptas aperiam repudiandae impedit quidem.</p>
+                        <p>陇赣机电工程有限公司是一家立足於苏州服务长三角的专业空气能热泵；别墅地源热泵的杰岀公司。</p>
                         <a class="readmore" href="single-with-sidebar.html">read more</a>
                     </div>
                 </div>
@@ -342,30 +342,30 @@
         <div class="col-lg-3 col-md-3 col-sm-12">
             <div class="clearfix"></div>
             <h2 class="general-title">
-                <span>Happy Testimonials</span>
+                <span>新闻中心</span>
             </h2>
             <div class="testimonials-slider">
                 <div id="myCarouselV" class="carousel thumbnail fade">
                     <div class="carousel-inner">
                         <div class="item active">
                             <div class="carousel-caption">
-                                <img class="img-thumbnail" src="demos/01_team.png" alt="">
-                                <h4>John DOE</h4>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies.</p>
+                                <img class="img-thumbnail" src="~/images/mc9.jpg" alt="">
+                                <h4>@Html.ActionLink("低温空气能热水器技术助力燃煤锅炉被替换", "News")</h4>
+                                <p>@Html.ActionLink("压缩机是空气能热水器的最核心的部件，空气能热水器", "News")</p>
                             </div>
                         </div>
                         <div class="item">
                             <div class="carousel-caption">
-                                <img class="img-thumbnail" src="demos/02_team.png" alt="">
-                                <h4>Bob STURT</h4>
-                                <p>Suscipit illo voluptas aperiam repudiandae impedit quidem. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit illo voluptas aperia.</p>
+                                <img class="img-thumbnail" src="~/images/jyx1.png" alt="">
+                                <h4>空气能成为主流热水器产品是必然趋势</h4>
+                                <p>近年来，随着空气能产业的快速崛起</p>
                             </div>
                         </div>
                         <div class="item">
                             <div class="carousel-caption">
-                                <img class="img-thumbnail" src="demos/03_team.png" alt="">
-                                <h4>Alex DESOUZA</h4>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies.</p>
+                                <img class="img-thumbnail" src="~/images/mc10.jpg" alt="">
+                                <h4>节能热水器：空气能和太阳能相互竞争</h4>
+                                <p>同为节能产品，本该共谋发展</p>
                             </div>
                         </div>
                     </div><!-- end carousel -->
@@ -377,9 +377,9 @@
     </div>
 </section>
 
-<section class="colon3">
+<section class="colon8">
     <div class="container">
-        <div class="message text-center" data-effect="slide-bottom">
+        <div class="message text-center" style="background:none;" data-effect="slide-bottom">
             <h2>产品展示</h2>
         </div>
 
@@ -387,32 +387,32 @@
         {
             string imgUrl = string.Format("~/images/mc{0}.png", i.ToString());
 
-            <div class="col-lg-3 col-md-3 col-sm-6" data-effect="slide-bottom">
-                <div class="gallery-box">
-                    <a href="@Url.Content(@imgUrl)" class="zoombox effect-icona" data-biggallery="gallery4" data-biggallerythumbnail="@Url.Content(@imgUrl)">
-                        <img src="@Url.Content(@imgUrl)" alt="">
-                    </a>
-                    <div class="gallery-box-titles">
-                        <h3>From Island</h3>
-                    </div><!-- gallery-box-titles -->
-                </div>
+        <div class="col-lg-3 col-md-3 col-sm-6" data-effect="slide-bottom">
+            <div class="gallery-box">
+                <a href="@Url.Content(@imgUrl)" class="zoombox effect-icona" data-biggallery="gallery4" data-biggallerythumbnail="@Url.Content(@imgUrl)">
+                    <img src="@Url.Content(@imgUrl)" alt="">
+                </a>
+                <div class="gallery-box-titles">
+                    <h3>From Island</h3>
+                </div><!-- gallery-box-titles -->
             </div>
+        </div>
         }
 
         @for (int i = 9; i <= 12; i++)
         {
             string imgUrl = string.Format("~/images/mc{0}.jpg", i.ToString());
 
-            <div class="col-lg-3 col-md-3 col-sm-6" data-effect="slide-bottom">
-                <div class="gallery-box">
-                    <a href="@Url.Content(@imgUrl)" class="zoombox effect-icona" data-biggallery="gallery4" data-biggallerythumbnail="@Url.Content(@imgUrl)">
-                        <img src="@Url.Content(@imgUrl)" alt="">
-                    </a>
-                    <div class="gallery-box-titles">
-                        <h3>From Island</h3>
-                    </div><!-- gallery-box-titles -->
-                </div>
+        <div class="col-lg-3 col-md-3 col-sm-6" data-effect="slide-bottom">
+            <div class="gallery-box">
+                <a href="@Url.Content(@imgUrl)" class="zoombox effect-icona" data-biggallery="gallery4" data-biggallerythumbnail="@Url.Content(@imgUrl)">
+                    <img src="@Url.Content(@imgUrl)" alt="">
+                </a>
+                <div class="gallery-box-titles">
+                    <h3>From Island</h3>
+                </div><!-- gallery-box-titles -->
             </div>
+        </div>
         }
 
     </div>
