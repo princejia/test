@@ -37,8 +37,8 @@ namespace Longgan.Web
                       "~/Content/bootstrap.css",
                       "~/Content/style.css"));
 
-            bundles.Add(new StyleBundle("~/Content/rs-plugin").Include(
-                ));
+            //bundles.Add(new StyleBundle("~/Content/rs-plugin").Include(
+            //    ));
 
             // Set EnableOptimizations to false for debugging. For more information,
             // visit http://go.microsoft.com/fwlink/?LinkId=301862
