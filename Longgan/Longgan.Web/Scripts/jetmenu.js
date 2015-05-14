@@ -18,7 +18,7 @@ jQuery.fn.jetmenu = function(options){
 		});
 	}
 	
-	$(menu).prepend("<li class='showhide'><span class='title'>MENU</span><span class='icon'><em></em><em></em><em></em><em></em></span></li>");
+	$(menu).prepend("<li class='showhide'><span class='title'>菜单</span><span class='icon'><em></em><em></em><em></em><em></em></span></li>");
 	
 	screenSize();
 	
