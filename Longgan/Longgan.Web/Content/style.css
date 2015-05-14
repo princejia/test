@@ -1852,6 +1852,9 @@
 		padding-top: 0;
 	}
 	.google-map {width:100%;border:2px solid #fff;height:100%;}
+    .google-map img {
+      max-width: none;
+    }
 	.js-video embed, .js-video iframe, .js-video object, .js-video video {
 		top: 0;
 		left: 0;
