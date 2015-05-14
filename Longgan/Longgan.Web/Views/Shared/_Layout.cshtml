@@ -45,41 +45,7 @@
             <div class="container">
                 <div class="col-lg-10 col-md-10 col-sm-12">
                     <nav>
-                        <ul id="jetmenu" class="jetmenu">
-                            <li><a href="Index">网站首页</a></li>
-                            <li>
-                                <a href="#">公司简介</a>
-                                <div class="megamenu full-width">
-                                    <div class="row">
-                                        <div class="col1">
-                                            <ul>
-                                                <li class="title"><h5>Home Examples</h5></li>
-                                                <li><a href="shop-style.html">Shop Style</a></li>
-                                                <li><a href="buddypress-style.html">BuddyPress Style</a></li>
-                                                <li><a href="landing-page-style.html">Landing Page Style</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col1">
-                                            <ul>
-                                                <li class="title"><h5>Page Templates</h5></li>
-                                                <li><a href="about.html">About Us</a></li>
-                                                <li><a href="services.html">Services</a></li>
-                                                <li><a href="team-members.html">Team Members</a></li>
-                                                <li><a href="testimonials.html">Testimonials</a></li>
-
-                                            </ul>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </li>
-                            <li><a href="#">产品展示</a></li>
-                            <li><a href="#">新闻中心</a></li>
-                            <li><a href="#">售后服务</a></li>
-                            <li><a href="#">安装案例</a></li>
-                            <li>@Html.ActionLink("联系我们", "Contact") </li>
-                            <li>@Html.ActionLink("十大优点", "Advantage") </li>
-                        </ul>
+                        @Html.Partial("_Menu")
                     </nav><!-- /nav -->
                 </div><!-- /col10 -->
 
@@ -142,7 +108,8 @@
     <script type="text/javascript">
 
         var revapi;
-        jQuery(document).ready(function () {
+        jQuery(document).ready(function ()
+        {
             revapi = jQuery('.tp-banner').revolution(
              {
                  delay: 9000,
