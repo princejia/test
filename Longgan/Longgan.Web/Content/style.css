@@ -1497,7 +1497,7 @@
 	.sitemap li a {color:#444444;}
 	.sitemap li:before{
 		content: "\f00c";
-		font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;;
+		font-family: "FontAwesome";
 		font-size: 12px;
 		list-style:none;
 		left: 0;
@@ -1507,7 +1507,7 @@
 	}
 	.check li:before {
 		content: "\f00c";
-		font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;;
+		font-family: "FontAwesome";
 		font-size: 16px;
 		left: 0;
 		padding-right:5px;
