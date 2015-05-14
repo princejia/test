@@ -48,13 +48,13 @@
 	::-moz-selection {
 		color: #fff;
 		text-shadow:none;
-		background:#B54321;
+		background:#289DCC;
 	}
 	
 	::selection {
 		color: #fff;
 		text-shadow:none;
-		background:#B54321;
+		background:#289DCC;
 	}
 	
 	img {
@@ -1477,7 +1477,7 @@
 		left:0;
 		right:0;
 		bottom:0;
-		background-color:#B54321; /* change if the mask should have another color then white */
+		background-color:#289DCC; /* change if the mask should have another color then white */
 		z-index:999999; /* makes sure it stays on top */
 	}
 	
@@ -1697,7 +1697,7 @@
 	  box-sizing: border-box;
 	}
 	.timeline .year {
-	  background: #B54321;
+	  background: #289DCC;
 	  font-size: 2em;
 	  max-width: 4em;
 	  clear: both;
