@@ -39,7 +39,7 @@
         <header class="header-wrapper">
             <div class="container">
                 <div>
-                    <a class="cssLogo" href="index.html"><img src="images/logo.jpg" alt=""></a>
+                    <a class="cssLogo" href="index.html"><img src="~/images/logo.jpg" alt=""></a>
                 </div>
 
             </div><!-- /container -->
@@ -78,8 +78,8 @@
                             <li><a href="#">新闻中心</a></li>
                             <li><a href="#">售后服务</a></li>
                             <li><a href="#">安装案例</a></li>
-                            <li><a href="Contact">联系我们</a></li>
-                            <li><a href="Advantage">十大优点</a></li>
+                            <li>@Html.ActionLink("联系我们", "Contact") </li>
+                            <li>@Html.ActionLink("十大优点", "Advantage") </li>
                         </ul>
                     </nav><!-- /nav -->
                 </div><!-- /col10 -->
@@ -179,7 +179,8 @@
 
     <script type="text/javascript">
         var revapi;
-        jQuery(document).ready(function () {
+        jQuery(document).ready(function ()
+        {
             revapi = jQuery('.tp-banner').revolution(
              {
                  delay: 9000,
