@@ -1477,7 +1477,9 @@
 		left:0;
 		right:0;
 		bottom:0;
-		background-color:#289DCC; /* change if the mask should have another color then white */
+        background:rgba(255, 255, 255, 0.8) none repeat scroll 0 0 !important;
+        filter:Alpha(opacity=80); 
+		/*background-color:#289DCC;  change if the mask should have another color then white */
 		z-index:999999; /* makes sure it stays on top */
 	}
 	
