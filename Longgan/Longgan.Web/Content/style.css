@@ -3411,10 +3411,10 @@
 
 	.singleheader {
 		display: block;
-		background:url(../images/02_slider.png) no-repeat fixed center top / cover;
+		/*background:url(../images/02_slider.png) no-repeat fixed center top / cover;*/
 		position: relative;
 		top: 0;
-		padding:40px 0 45px;
+        padding-top:40px; 		/*padding:40px 0 45px;*/
 		width: 100%;
 	}
 	
