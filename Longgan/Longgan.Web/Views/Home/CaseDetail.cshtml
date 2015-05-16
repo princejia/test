@@ -1,0 +1,109 @@
+﻿@{
+    ViewBag.Title = "CaseDetail";
+}
+
+<link rel="stylesheet" type="text/css" href="~/Content/rs-plugin/css/settings.css" media="screen" />
+
+
+<div id="wrapper">
+
+    <div class="singleheader">
+        <div class="container">
+            <div class="col-lg-6 col-sm-6 col-md-6">
+                <div class="single-title">
+                    <h3>安装案例-南京四五四解放军医院</h3>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-md-6">
+                <div class="breadcrumb-container">
+                    <ul class="breadcrumb">
+                        <li>@Html.ActionLink("首页", "Index")</li>
+                        <li>@Html.ActionLink("安装案例", "Case")</li>
+                        <li class="active">南京四五四解放军医院</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="shadow"></div>
+    </div>
+
+    <section class="colon14">
+
+        <!-- START CONTENT AND SIDEBAR -->
+        <div class="container general">
+
+            <div id="content" class="single-portfolio col-lg-12 col-md-12 col-sm-12">
+
+                <div class="col-lg-8 col-md-8 col-sm-12">
+                    <div class="flexslider">
+                        <ul class="slides">
+                            <li>
+                                <a ><img src="~/images/Case/南京四五四解放军医院-2.jpg" alt="" title="" /></a>
+                            </li>
+                            <li>
+                                <a ><img src="~/images/Case/南京四五四解放军医院-1.jpg" alt="" title="" /></a>
+                            </li>
+                            <li>
+                                <a ><img src="~/images/Case/南京四五四解放军医院-3.jpg" alt="" title="" /></a>
+                            </li>
+                            <li>
+                                <a><img src="~/images/Case/南京四五四解放军医院-4.jpg" alt="" title="" /></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="clearfix"></div>
+                    <h2 class="general-title">
+                        <span>南京四五四解放军医院</span>
+                    </h2>
+
+                    <p>5台10匹空气能与太阳能完美结合；体现了陇赣人节能环保服务社会的经营理念。5台10匹空气能与太阳能完美结合；体现了陇赣人节能环保服务社会的经营理念。</p>
+
+                   <hr>
+
+                    <div class="clearfix"></div>
+
+                    <div class="accordion" id="accordion2">
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                                    <em class="icon-plus icon-fixed-width"></em>案列详情
+                                </a>
+                            </div>
+                            <div id="collapseTwo" class="accordion-body collapse in">
+                                <div class="accordion-inner">
+                                    <ul class="portfolio-details">
+                                        <li><strong>日期 :</strong> 2014/05/05</li>
+                                        <li><strong>地点 :</strong> <a href="#" title="">南京XXXXX</a></li>
+                                        <li><strong>空气能 :</strong> 5台</li>
+                                        <li><strong>太阳能 :</strong> 10台</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- end accordion -->
+                </div><!-- end widget -->
+            </div><!-- end col-4 -->
+            <div class="clearfix"></div>
+
+            <ul class="pager">
+                <li class="previous">
+                    <a href="#">← 前一个</a>
+                </li>
+                <li class="next">
+                    <a href="#">下一个 →</a>
+                </li>
+            </ul>
+
+        </div><!-- end content -->
+
+
+    </section>
+    <div class="clearfix"></div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/Scripts/jquery.flexslider-min.js");
+}
