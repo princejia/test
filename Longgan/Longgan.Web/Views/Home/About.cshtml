@@ -1,7 +1,28 @@
 ﻿@{
     ViewBag.Title = "About";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+
+<div id="wrapper">
+
+    <div class="singleheader">
+        <div class="container">
+            <div class="col-lg-6 col-sm-6 col-md-6">
+                <div class="single-title">
+                    <h3>联系我们</h3>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-md-6">
+                <div class="breadcrumb-container">
+                    <ul class="breadcrumb">
+                        <li>@Html.ActionLink("首页", "Index")</li>
+                        <li class="active">联系我们</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="shadow"></div>
+    </div>
+
+
+</div>

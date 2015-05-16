@@ -221,7 +221,7 @@
                     <h3>产品中心</h3>
                 </header>
                 <p>商用型热泵，家用型热泵，热源热泵。</p><p>你们可以添加你们要的文字</p><p>xxxxxxxxxxxx</p>
-                @Html.ActionLink("read more", "ProductList")
+                @Html.ActionLink("read more", "ProductsList", null, new { @class = "readmore" })
             </div>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-6" data-effect="slide-bottom">
@@ -233,8 +233,8 @@
                 <p>专业设计</p>
                 <p>专业服务</p>
                 <p>专业安装</p>
-                <a class="readmore" href="#"></a>
-                @Html.ActionLink("read more", "Case")
+
+                @Html.ActionLink("read more", "Case", null, new { @class = "readmore" })
             </div>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-6" data-effect="slide-bottom">
@@ -244,7 +244,7 @@
                     <h3>售后服务</h3>
                 </header>
                 <p>技术更精，速度更快，价格更低。</p><p>24小时全天待命。</p><p>一经服务；定期回访</p>
-                @Html.ActionLink("read more", "Case")
+                @Html.ActionLink("read more", "Case", null, new { @class = "readmore" })
             </div>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-6" data-effect="slide-bottom">
@@ -255,7 +255,7 @@
                 </header>
                 <p>感谢您对我们的支持，如果您对公司或者公司产品有任何意见、建议或者批评，请仔细填写以下表单，我们将会尽快处理并与您联系！</p>
                 
-                <div class="readmore">@Html.ActionLink("read more", "Contact")</div>
+                @Html.ActionLink("read more", "Contact", null, new { @class = "readmore" })
                 
             </div>
         </div>
@@ -274,11 +274,23 @@
 
             <p>公司拥有丰富的专业人才及雄厚的技术力量，公司从产品的研发，设计，安装及售后均处於同行业的前列；已经在苏州地区拥有八百多家的忠实用户：涵盖工厂宿舍；酒店宾馆，别墅及住宅小区...</p>
 
-            <a class="btn btn-primary" href="#">更多</a>
+            @Html.ActionLink("更多", "About", null, new { @class = "btn btn-primary" })
 
         </div>
 
-        <div class="col-lg-3 col-md-3 col-sm-6" data-effect="slide-bottom">
+
+        <div class="col-lg-6 col-md-6 col-sm-6" data-effect="slide-bottom">
+
+            <header>
+                <h3><i class="icon-user-md"></i> 新闻中心</h3>
+            </header>
+            <p>南方天气转暖 如何避过用电高峰 <strong class="text-success">2014-4-5</strong></p>
+            <p>北方仍处三月雪，南方桃花已盛开。东北三省依然是一片冰寒，部分南方沿海城市却已迎来早春，闽南漳、厦一带甚至一度回暖至20摄氏度。据预测，福建、海南等南方省市在接下来的四月份，气温将达到25摄氏度左右。一旦温度上升，用电高峰便难避免，那么如何应对用电高峰，保证洗浴舒适度与节约性呢？空气能热水器为此提供了良好的解决方式。</p>
+
+            @Html.ActionLink("更多", "News", null, new { @class = "btn btn-primary" })
+        </div>
+
+        @*<div class="col-lg-3 col-md-3 col-sm-6" data-effect="slide-bottom">
 
             <header>
                 <h3><i class="icon-user-md"></i> 售后服务</h3>
@@ -288,9 +300,9 @@
             <p>一经服务；定期回访</p>
             <a class="btn btn-primary" href="#">更多</a>
 
-        </div>
+        </div>*@
 
-        <div class="col-lg-3 col-md-3 col-sm-6" data-effect="slide-bottom">
+        @*<div class="col-lg-3 col-md-3 col-sm-6" data-effect="slide-bottom">
             <header>
                 <h3><i class="icon-newspaper-o"></i> 新闻中心</h3>
             </header>
@@ -324,7 +336,7 @@
                 </div><!-- myCarouselV -->
             </div>
 
-        </div>
+        </div>*@
 
 
     </div>
