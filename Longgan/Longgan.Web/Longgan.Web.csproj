@@ -356,6 +356,7 @@
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
@@ -386,6 +387,8 @@
     <Content Include="Views\Home\Case.cshtml" />
     <Content Include="Views\Home\News.cshtml" />
     <Content Include="Views\Home\CaseDetail.cshtml" />
+    <Content Include="Views\Home\ProductsList.cshtml" />
+    <Content Include="Views\Home\ProductsDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

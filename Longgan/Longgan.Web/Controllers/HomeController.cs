@@ -54,5 +54,15 @@ namespace Longgan.Web.Controllers
         {
             return View();
         }
+
+        public ActionResult ProductsList()
+        {
+            return View();
+        }
+
+        public ActionResult ProductsDetail()
+        {
+            return View();
+        }
     }
 }

@@ -1,0 +1,165 @@
+﻿<section class="colon14">
+    <div class="singleheader">
+        <div class="container">
+            <div class="col-lg-6 col-sm-6 col-md-6">
+                <div class="single-title">
+                    <h3>产品展示</h3>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-6 col-md-6">
+                <div class="breadcrumb-container">
+                    <ul class="breadcrumb">
+                        <li>@Html.ActionLink("首页", "Index")</li>
+                        <li class="active">产品展示</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="shadow"></div>
+    </div>
+
+    <!-- START CONTENT AND SIDEBAR -->
+    <div class="container general">
+        <div id="content" class="single col-lg-12 col-md-12 col-sm-12">
+            @*<div class="message text-center">
+                    <h2>Let's see all example <span>portfolio</span> items below</h2>
+                    <p> Lorem ipsum <a href="#">dolor sit amet</a>, consectetur adipisicing elit. Suscipit illo voluptas aperiam repudiandae impedit quidem.</p>
+                </div>*@
+
+            <div class="dm-portfolio">
+                <div class="container">
+                    <nav class="portfolio-filter">
+                        <ul>
+                            <li><a href="#" class="btn btn-general" data-filter="*">所有产品</a></li>
+                            <li><a href="#" class="btn btn-general" data-filter=".SYX">商用型热泵</a></li>
+                            <li><a href="#" class="btn btn-general" data-filter=".JYX">家用型热泵</a></li>
+                        </ul>
+                    </nav>
+                </div> <!--/container -->
+            </div> <!--/dm portfolio -->
+
+            <div class="clearfix"></div>
+
+            <section class="portfolio">
+
+                @for (int i = 1; i <= 8; i++)
+                {
+                    string imgUrl = string.Format("~/images/mc{0}.png", i.ToString());
+
+                    <div class="col-lg-3 col-md-3 col-sm-6 JYX">
+                        <div class="portfolio-columns">
+                            <a href="@Url.Action("ProductsDetail")">
+                                <img src="@Url.Content(@imgUrl)" alt="">
+                                <div>
+                                    <h5>SYRB-B系列热泵热水机组</h5>
+                                    <p><i class="icon-folder-open-alt"></i>详细</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                }
+
+                @for (int i = 9; i <= 12; i++)
+                {
+                    string imgUrl = string.Format("~/images/mc{0}.jpg", i.ToString());
+                    <div class="col-lg-3 col-md-3 col-sm-6 SYX">
+                        <div class="portfolio-columns">
+                            <a href="single-portfolio-1.html">
+                                <img src="@Url.Content(@imgUrl)" alt="">
+                                <div>
+                                    <h5>SYRB-B系列热泵热水机组</h5>
+                                    <p><i class="icon-folder-open-alt"></i>详细</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                }
+
+
+
+            </section>
+
+            <div class="clearfix"></div>
+
+        </div><!-- end content -->
+    </div><!-- end container -->
+    <!-- END CONTENT -->
+
+</section><!-- end colon1 -->
+@section Scripts {
+    <script>
+        // Portfolio
+        (function ($)
+        {
+            "use strict";
+            var $container = $('.portfolio'),
+				$items = $container.find('.portfolio-columns'),
+				portfolioLayout = 'fitRows';
+
+            if ($container.hasClass('portfolio-centered'))
+            {
+                portfolioLayout = 'masonry';
+            }
+
+            $container.isotope({
+                filter: '*',
+                animationEngine: 'best-available',
+                layoutMode: portfolioLayout,
+                animationOptions: {
+                    duration: 750,
+                    easing: 'linear',
+                    queue: false
+                },
+                masonry: {
+
+                }
+            }, refreshWaypoints());
+
+            function refreshWaypoints()
+            {
+                setTimeout(function ()
+                {
+                }, 1000);
+            }
+
+            $('nav.portfolio-filter ul a').on('click', function ()
+            {
+                var selector = $(this).attr('data-filter');
+                $container.isotope({ filter: selector }, refreshWaypoints());
+                $('nav.portfolio-filter ul a').removeClass('active');
+                $(this).addClass('active');
+                return false;
+            });
+
+            function setColumns()
+            {
+                var winWidth = $(window).width(),
+					columnNumber = getColumnNumber(),
+					itemWidth = Math.floor(winWidth / columnNumber);
+
+                $container.find('.portfolio-columns').each(function ()
+                {
+                    $(this).css({
+                        width: itemWidth + 'px'
+                    });
+                });
+            }
+
+            function setPortfolio()
+            {
+                setColumns();
+                $container.isotope('reLayout');
+            }
+
+            $container.imagesLoaded(function ()
+            {
+                setPortfolio();
+            });
+
+            $(window).on('resize', function ()
+            {
+                setPortfolio();
+            });
+        })(jQuery);
+    </script>
+}

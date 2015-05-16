@@ -21,6 +21,7 @@ namespace Longgan.Web
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
+                      "~/Scripts/jquery.transit.min.js",
                       "~/Scripts/retina-1.1.0.js",
                       "~/Scripts/jquery.unveilEffects.min.js",
                       "~/Scripts/jetmenu.js",
