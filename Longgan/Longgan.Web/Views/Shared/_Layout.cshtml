@@ -110,6 +110,9 @@
         var revapi;
         jQuery(document).ready(function ()
         {
+            if ($('.tp-banner').length == 0)
+                return;
+
             revapi = jQuery('.tp-banner').revolution(
              {
                  delay: 9000,
@@ -125,8 +128,35 @@
 
         jQuery(document).ready(function ()
         {
+            if ($('.zoombox').length == 0)
+                return;
+
             $(".zoombox").zoomBox({
                 extra_classes: 'nobtnsocial nobtnclose'
+            });
+        });
+
+        var $ = jQuery.noConflict();
+        $(window).load(function () {
+
+            if ($('.flexslider').length == 0)
+                return;
+
+            $('.flexslider').flexslider({
+                animation: "fade"
+            });
+
+            $(function () {
+                $('.show_menu').click(function () {
+                    $('.menu').fadeIn();
+                    $('.show_menu').fadeOut();
+                    $('.hide_menu').fadeIn();
+                });
+                $('.hide_menu').click(function () {
+                    $('.menu').fadeOut();
+                    $('.show_menu').fadeIn();
+                    $('.hide_menu').fadeOut();
+                });
             });
         });
 

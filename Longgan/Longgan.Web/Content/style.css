@@ -2454,6 +2454,11 @@
 		margin-top:0px;
 	}
 	
+    .gallery-box-link a {
+        color: #121214;
+		text-decoration: none;
+	}
+
 	.gallery-box h3,
 	.box h3 {
 		margin: 15px 0 10px;

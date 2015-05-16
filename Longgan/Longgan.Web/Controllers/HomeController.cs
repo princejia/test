@@ -45,5 +45,14 @@ namespace Longgan.Web.Controllers
         {
             return View();
         }
+
+        public ActionResult Case()
+        {
+            return View();
+        }
+        public ActionResult CaseDetail()
+        {
+            return View();
+        }
     }
 }
