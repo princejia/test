@@ -5903,6 +5903,15 @@ a .icon-flip-vertical:before {
 .icon-cogs:before {
   content: "\f085";
 }
+.icon-users:before{
+    content:"\f0c0";
+}
+.icon-whatsapp:before{
+    content:"\f232";
+}
+.icon-newspaper-o:before{
+    content:"\f1ea";
+}
 .icon-comments:before {
   content: "\f086";
 }
