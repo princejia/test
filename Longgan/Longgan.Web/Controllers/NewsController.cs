@@ -8,17 +8,18 @@ using System.Web;
 using System.Web.Mvc;
 using Longgan.Models.Home;
 using Longgan.Web.Models;
+using Longgan.Logics.Home;
 
 namespace Longgan.Web.Controllers
 {
     public class NewsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-
+        NewsLogic logic = new NewsLogic();
         // GET: News
         public ActionResult Index()
         {
-            return View(db.News.ToList());
+            return View(logic.GetNews());
         }
 
         // GET: News/Details/5
@@ -28,7 +29,7 @@ namespace Longgan.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            New @new = db.News.Find(id);
+            New @new = logic.GetNew(id);
             if (@new == null)
             {
                 return HttpNotFound();
@@ -51,8 +52,7 @@ namespace Longgan.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.News.Add(@new);
-                db.SaveChanges();
+                logic.AddNews(@new);
                 return RedirectToAction("Index");
             }
 
@@ -66,7 +66,7 @@ namespace Longgan.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            New @new = db.News.Find(id);
+            New @new = logic.GetNew(id);
             if (@new == null)
             {
                 return HttpNotFound();
@@ -83,8 +83,7 @@ namespace Longgan.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(@new).State = EntityState.Modified;
-                db.SaveChanges();
+                logic.UpdateNews(@new);
                 return RedirectToAction("Index");
             }
             return View(@new);
@@ -97,7 +96,7 @@ namespace Longgan.Web.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            New @new = db.News.Find(id);
+            New @new = logic.GetNew(id);
             if (@new == null)
             {
                 return HttpNotFound();
@@ -110,9 +109,8 @@ namespace Longgan.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            New @new = db.News.Find(id);
-            db.News.Remove(@new);
-            db.SaveChanges();
+            New @new = logic.GetNew(id);
+            logic.RemoveNews(@new);
             return RedirectToAction("Index");
         }
 

@@ -15,5 +15,25 @@ namespace Longgan.Logics.Home
         {
             return da.GetNews();
         }
+
+        public New GetNew(string Id)
+        {
+            return da.GetNew(Id);
+        }
+
+        public void UpdateNews(New n)
+        {
+            da.UpdateNews(n);
+        }
+
+        public void AddNews(New n)
+        {
+            da.AddNews(n);
+        }
+
+        public void RemoveNews(New n)
+        {
+            da.RemoveNews(n);
+        }
     }
 }

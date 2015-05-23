@@ -13,5 +13,25 @@ namespace Longgan.DataAccess.Home
         {
             return base.Get().OrderByDescending(p => p.Created).ToList();
         }
+
+        public New GetNew(string Id)
+        {
+            return base.Get(p => p.Id == Id).FirstOrDefault();
+        }
+
+        public void UpdateNews(New n)
+        {
+            base.Update(n);
+        }
+
+        public void AddNews(New n)
+        {
+            base.Insert(n);
+        }
+
+        public void RemoveNews(New n)
+        {
+            base.Delete(n);
+        }
     }
 }
