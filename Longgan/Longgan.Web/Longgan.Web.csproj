@@ -160,6 +160,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -371,7 +372,9 @@
     <Content Include="Scripts\zoombox.js" />
     <Content Include="Scripts\zoomer.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -404,15 +407,21 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Message.cshtml" />
     <Content Include="Views\Home\Advantage.cshtml" />
-    <Content Include="Views\Home\_Menu.cshtml" />
     <Content Include="Views\Home\Case.cshtml" />
     <Content Include="Views\Home\News.cshtml" />
     <Content Include="Views\Home\CaseDetail.cshtml" />
     <Content Include="Views\Home\ProductsList.cshtml" />
     <Content Include="Views\Home\ProductsDetail.cshtml" />
+    <Content Include="Views\News\Create.cshtml" />
+    <Content Include="Views\News\Delete.cshtml" />
+    <Content Include="Views\News\Details.cshtml" />
+    <Content Include="Views\News\Edit.cshtml" />
+    <Content Include="Views\News\Index.cshtml" />
+    <Content Include="Views\Shared\_Menu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Admin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -420,6 +429,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Longgan.Logics\Longgan.Logics.csproj">
+      <Project>{bb937553-1626-4758-a77d-b952f3c9fb35}</Project>
+      <Name>Longgan.Logics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Longgan.Models\Longgan.Models.csproj">
+      <Project>{960ae669-bdde-4722-bad3-13d5d3e71f6a}</Project>
+      <Name>Longgan.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

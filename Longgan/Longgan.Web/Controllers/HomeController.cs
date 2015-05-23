@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Longgan.Logics.Home;
+using Longgan.Models.Home;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -43,7 +45,9 @@ namespace Longgan.Web.Controllers
 
         public ActionResult News()
         {
-            return View();
+            NewsLogic nLogic = new NewsLogic();
+            List<New> news = nLogic.GetNews();
+            return View(news);
         }
 
         public ActionResult Case()

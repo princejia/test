@@ -28,5 +28,7 @@ namespace Longgan.Web.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<Longgan.Models.Home.New> News { get; set; }
     }
 }
