@@ -39,8 +39,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Home\NewsLogic.cs" />
+    <Compile Include="Logic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Longgan.DataAccess\Longgan.DataAccess.csproj">
+      <Project>{2d68f061-09d1-4a68-a4db-199c2c19d3fd}</Project>
+      <Name>Longgan.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Longgan.Models\Longgan.Models.csproj">
+      <Project>{960ae669-bdde-4722-bad3-13d5d3e71f6a}</Project>
+      <Name>Longgan.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
