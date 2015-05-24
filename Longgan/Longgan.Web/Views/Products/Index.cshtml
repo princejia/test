@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Longgan.Models.Home.Product>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>产品</h2>
+
+<p>
+    @Html.ActionLink("新建", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Content)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PicName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IntroName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Created)
+        </th>
+        <th></th>
+    </tr>
+    @{string filePath = System.Configuration.ConfigurationManager.AppSettings["fileRoot"];
+    }
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Content)
+            </td>
+            <td>
+
+                @if (!string.IsNullOrEmpty(item.PicName))
+                {
+                    string picPath = string.Format("{0}\\Product\\{1}{2}", filePath, item.PicName, Path.GetExtension(item.PicName));
+                    <img src="@picPath" style="width: 150px; height: 150px;" />
+                }
+                
+            </td>
+            <td>
+                @if (!string.IsNullOrEmpty(item.IntroName))
+                {
+                    string picPath = string.Format("{0}\\Product\\{1}{2}", filePath, item.IntroName, Path.GetExtension(item.IntroName));
+                    <img src="@picPath" style="width: 150px; height: 150px;" />
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Created)
+            </td>
+            <td>
+                @Html.ActionLink("编辑", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("详细", "Details", new { id = item.Id }) |
+                @Html.ActionLink("删除", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
