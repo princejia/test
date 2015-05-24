@@ -13,9 +13,11 @@ namespace Longgan.Models.Home
         public string Id { get; set; }
 
         [Required, StringLength(100)]
+        [Display(Name="名称")]
         public string Title { get; set; }
 
         [Required, StringLength(3000)]
+        [Display(Name = "内容")]
         public string Content { get; set; }
 
         public int Hot { get; set; }

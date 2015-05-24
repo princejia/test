@@ -51,6 +51,7 @@
     <Compile Include="DatabaseContext.cs" />
     <Compile Include="GenericRepository.cs" />
     <Compile Include="Home\NewsDA.cs" />
+    <Compile Include="Home\ProductsDA.cs" />
     <Compile Include="Migrations\201505230644177_AddTables.cs" />
     <Compile Include="Migrations\201505230644177_AddTables.Designer.cs">
       <DependentUpon>201505230644177_AddTables.cs</DependentUpon>

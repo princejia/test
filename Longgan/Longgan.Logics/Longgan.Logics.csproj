@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Home\NewsLogic.cs" />
+    <Compile Include="Home\ProductsLogic.cs" />
     <Compile Include="Logic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

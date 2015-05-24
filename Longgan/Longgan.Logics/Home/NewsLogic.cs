@@ -22,12 +22,14 @@ namespace Longgan.Logics.Home
         }
 
         public void UpdateNews(New n)
-        {
+        {            
             da.UpdateNews(n);
         }
 
         public void AddNews(New n)
         {
+            n.Id = Guid.NewGuid().ToString();
+            n.Created = DateTime.Now;
             da.AddNews(n);
         }
 

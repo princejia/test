@@ -27,7 +27,9 @@ namespace Longgan.Web
                       "~/Scripts/jetmenu.js",
                       "~/Scripts/jquery.isotope.min.js",
                       "~/Scripts/respond.js",
-                      "~/Scripts/application.js"));
+                      "~/Scripts/application.js",
+                      "~/Scripts/jasny-bootstrap.js"
+                      ));
 
             bundles.Add(new ScriptBundle("~/bundles/rs-plugin").Include(
                       "~/Scripts/jquery.nivo.slider.js",
@@ -37,6 +39,12 @@ namespace Longgan.Web
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/style.css"));
+
+            bundles.Add(new StyleBundle("~/Content/Admincss").Include(
+                      "~/Content/AdminCss/bootstrap.css",
+                      "~/Content/AdminCss/Site.css",
+                      "~/Content/AdminCss/jasny-bootstrap.css"                      
+                      ));
 
             //bundles.Add(new StyleBundle("~/Content/rs-plugin").Include(
             //    ));
