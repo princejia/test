@@ -173,6 +173,7 @@
   <ItemGroup>
     <Content Include="Content\AdminCss\bootstrap.css" />
     <Content Include="Content\AdminCss\bootstrap.min.css" />
+    <Content Include="Content\AdminCss\jasny-bootstrap.css" />
     <Content Include="Content\AdminCss\Site.css" />
     <Content Include="Content\bbpress.css" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -351,6 +352,7 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\countdown.js" />
     <Content Include="Scripts\grid.js" />
+    <Content Include="Scripts\jasny-bootstrap.js" />
     <Content Include="Scripts\jetmenu.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
