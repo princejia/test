@@ -17,7 +17,7 @@ namespace Longgan.Models.Home
         [Required(ErrorMessage = "邮件不能为空"), EmailAddress(ErrorMessage = "请输入正确的邮箱地址"), StringLength(100)]
         [Display(Name = "邮件")]
         public string Email { get; set; }
-        [Required(ErrorMessage = "电话不能为空"), Phone(ErrorMessage = "请输入正确的电话号码"), StringLength(100)]
+        [Required(ErrorMessage = "电话不能为空"), System.ComponentModel.DataAnnotations.RegularExpression("\\d{8,11}", ErrorMessage = "请输入正确的电话号码"), StringLength(100)]
         [Display(Name = "电话")]
         public string Phone { get; set; }
         [Required(ErrorMessage = "标题不能为空"), StringLength(100)]

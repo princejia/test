@@ -64,10 +64,16 @@
                         @Html.TextAreaFor(m => m.Content, new { @class = "form-control", @placeholder = "内容", rows = 5 })
                         @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })
                         <br>
-                        <input type="text" id="Txtidcode" class="txtVerification" />
-                        <span id="idcode"></span>
+                        <div class="form-group">
+                            <div class="col-md-3" style="padding-left:0px;">
+                                <input type="text" id="Txtidcode" class="form-control" />
+                            </div>
+                            <span id="idcode"></span> <div id="vMsg"></div>
+                        </div>
+
                         <br />
-                        <button type="submit" class="btn btn-primary"><i class="icon-envelope-alt"></i> 我要提交</button>
+                        <a class="btn btn-primary" id="NeedSubmit"><i class="icon-envelope-alt"></i> 我要提交</a>
+                        <button type="submit" id="btnSubmit" style="display:none;" class="btn btn-primary"><i class="icon-envelope-alt"></i> 我要提交</button>
                     }
                     <br>
                 </div>
@@ -170,6 +176,18 @@
         $(document).ready(function ()
         {
             $.idcode.setCode();
+
+            $("#NeedSubmit").click(function ()
+            {
+                var IsBy = $.idcode.validateCode();
+                if (IsBy)
+                {
+                    $("#btnSubmit").trigger("click");
+                } else
+                {
+                    $("#vMsg").html("<span class='text-danger'>验证码错误</span>");
+                }
+            });
         });
     </script>
 }
