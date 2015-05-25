@@ -1,7 +1,10 @@
-﻿@{
+﻿@model Longgan.Models.Home.Message
+@{
     ViewBag.Title = "Contact";
 }
 
+
+<link href="~/Content/jquery.idcode.css" rel="stylesheet" />
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=DtGomKiC2t3gO0DikMIjFtHz"></script>
 
 <div id="wrapper">
@@ -30,7 +33,6 @@
 
             <div id="content" class="single col-lg-12 col-md-12 col-sm-12">
 
-                <div style="height:300px" class="google-map" id="map"></div>
 
                 <div class="divider"></div>
 
@@ -42,19 +44,31 @@
                 <hr>
 
                 <div class="col-lg-5 col-md-5 col-sm-5">
-                    <form id="#" action="#">
-                        <input type="text" class="form-control" placeholder="姓名">
+                    <h4 class="text-success">@ViewBag.Success</h4>
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+
+                        @Html.TextBoxFor(m => m.Name, new { @class = "form-control", @placeholder = "姓名" })
+                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
                         <br>
-                        <input type="text" class="form-control" placeholder="电话">
+                        @Html.TextBoxFor(m => m.Phone, new { @class = "form-control", @placeholder = "电话" })
+                        @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
                         <br>
-                        <input type="text" class="form-control" placeholder="邮箱">
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "邮箱" })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
                         <br>
-                        <input type="text" class="form-control" placeholder="所在地址">
+                        @Html.TextBoxFor(m => m.Title, new { @class = "form-control", @placeholder = "标题" })
+                        @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
                         <br>
-                        <textarea class="form-control" placeholder="您的问题" rows="5"></textarea>
+                        @Html.TextAreaFor(m => m.Content, new { @class = "form-control", @placeholder = "内容", rows = 5 })
+                        @Html.ValidationMessageFor(model => model.Content, "", new { @class = "text-danger" })
                         <br>
-                        <button class="btn btn-primary"><i class="icon-envelope-alt"></i> 我要提交</button>
-                    </form>
+                        <input type="text" id="Txtidcode" class="txtVerification" />
+                        <span id="idcode"></span>
+                        <br />
+                        <button type="submit" class="btn btn-primary"><i class="icon-envelope-alt"></i> 我要提交</button>
+                    }
                     <br>
                 </div>
 
@@ -74,6 +88,10 @@
 
                 <div class="clearfix"></div>
 
+                <div class="divider"></div>
+                <div style="height:300px" class="google-map" id="map"></div>
+
+
 
             </div><!-- end content -->
         </div><!-- end container -->
@@ -83,32 +101,39 @@
 
 <script type="text/javascript">
     //创建和初始化地图函数：
-    function initMap() {
+    function initMap()
+    {
         createMap();//创建地图
         setMapEvent();//设置地图事件
         addMapControl();//向地图添加控件
         addMapOverlay();//向地图添加覆盖物
     }
-    function createMap() {
+    function createMap()
+    {
         map = new BMap.Map("map");
         map.centerAndZoom(new BMap.Point(120.584066, 31.271808), 16);
     }
-    function setMapEvent() {
+    function setMapEvent()
+    {
         map.enableScrollWheelZoom();
         map.enableKeyboard();
         map.enableDragging();
         map.enableDoubleClickZoom()
     }
-    function addClickHandler(target, window) {
-        target.addEventListener("click", function () {
+    function addClickHandler(target, window)
+    {
+        target.addEventListener("click", function ()
+        {
             target.openInfoWindow(window);
         });
     }
-    function addMapOverlay() {
+    function addMapOverlay()
+    {
         var markers = [
           { content: "地址: 苏州高新区横塘好易家4幢288号", title: "苏州陇赣机电工程有限公司", imageOffset: { width: -23, height: -21 }, position: { lat: 31.270512, lng: 120.585395 } }
         ];
-        for (var index = 0; index < markers.length; index++) {
+        for (var index = 0; index < markers.length; index++)
+        {
             var point = new BMap.Point(markers[index].position.lng, markers[index].position.lat);
             var marker = new BMap.Marker(point, {
                 icon: new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png", new BMap.Size(20, 25), {
@@ -128,7 +153,8 @@
         };
     }
     //向地图添加控件
-    function addMapControl() {
+    function addMapControl()
+    {
         var scaleControl = new BMap.ScaleControl({ anchor: BMAP_ANCHOR_BOTTOM_LEFT });
         scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
         map.addControl(scaleControl);
@@ -138,3 +164,12 @@
     var map;
     initMap();
 </script>
+@section Scripts {
+    @Scripts.Render("~/Scripts/jquery.idcode.js");
+    <script type="text/javascript">
+        $(document).ready(function ()
+        {
+            $.idcode.setCode();
+        });
+    </script>
+}

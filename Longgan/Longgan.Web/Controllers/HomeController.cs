@@ -22,11 +22,23 @@ namespace Longgan.Web.Controllers
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Contact(string success)
         {
-            ViewBag.Message = "Your contact page.";
-
+            @ViewBag.Success = success;
             return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Contact(Message msg)
+        {
+            MessageLogic logic = new MessageLogic();
+            if (ModelState.IsValid)
+            {
+                logic.AddMessage(msg);
+                return RedirectToAction("Contact", new { success = "留言成功" });
+            }
+
+            return View(msg);
         }
 
         public ActionResult Message()

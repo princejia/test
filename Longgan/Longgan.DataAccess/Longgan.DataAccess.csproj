@@ -50,11 +50,16 @@
   <ItemGroup>
     <Compile Include="DatabaseContext.cs" />
     <Compile Include="GenericRepository.cs" />
+    <Compile Include="Home\MessageDA.cs" />
     <Compile Include="Home\NewsDA.cs" />
     <Compile Include="Home\ProductsDA.cs" />
     <Compile Include="Migrations\201505230644177_AddTables.cs" />
     <Compile Include="Migrations\201505230644177_AddTables.Designer.cs">
       <DependentUpon>201505230644177_AddTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201505250836402_UpdateMessage.cs" />
+    <Compile Include="Migrations\201505250836402_UpdateMessage.Designer.cs">
+      <DependentUpon>201505250836402_UpdateMessage.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,6 +78,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201505230644177_AddTables.resx">
       <DependentUpon>201505230644177_AddTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201505250836402_UpdateMessage.resx">
+      <DependentUpon>201505250836402_UpdateMessage.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Home\MessageLogic.cs" />
     <Compile Include="Home\NewsLogic.cs" />
     <Compile Include="Home\ProductsLogic.cs" />
     <Compile Include="Logic.cs" />

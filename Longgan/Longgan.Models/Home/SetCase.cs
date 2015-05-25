@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Longgan.Models.Home
 {
-    public class SetCase
+    public class SetCase : Model
     {
         [Key, StringLength(36)]
         public string Id { get; set; }
