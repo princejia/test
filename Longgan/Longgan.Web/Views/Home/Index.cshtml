@@ -1,215 +1,274 @@
 ﻿@{
     ViewBag.Title = "首页";
 }
-<link rel="stylesheet" type="text/css" href="~/Content/rs-plugin/css/settings.css" media="screen" />
+<!-- LayerSlider styles -->
+<link rel="stylesheet" href="~/Content/layerslider/css/layerslider.css" type="text/css">
+
+<style>
+    .colon9 .slider-wrapper {
+        background: #ffffff;
+        padding: 5px;
+    }
+
+    .ls-layer,
+    .ls-layer * {
+        font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+        white-space: nowrap;
+        font-weight: normal;
+    }
+
+    .l1-s1 {
+        color: black;
+        text-shadow: 0px 2px 3px #546223;
+        font-size: 60px;
+    }
+
+    .l1-s1b {
+        color: #706a6a;
+        text-shadow: 0px 0px 10px #fff;
+        font-size: 60px;
+    }
+
+    .l1-s2 {
+        color: #054f8d;
+        text-shadow: 0px 2px 3px #546223;
+        font-size: 80px;
+    }
+
+    .l1-s2b {
+        color: #5383ac;
+        text-shadow: 0px 2px 3px #fff;
+        font-size: 80px;
+    }
+
+    .l1-s3 {
+        padding: 0px 10px;
+        color: #f51111;
+        text-shadow: none;
+        font-size: 40px;
+        font-style: italic;
+        font-weight: bold;
+    }
+
+
+    .l2-plus1 {
+        border-radius: 100px;
+        -moz-border-radius: 100px;
+        -webkit-border-radius: 100px;
+        text-align: center;
+        width: 50px;
+        height: 50px;
+        font-size: 50px;
+        line-height: 50px;
+        color: #eee;
+        background: #2e69ad;
+    }
+
+    .l2-text1 {
+        font-size: 30px;
+        color: #f0f6fd;
+    }
+
+    .l2-text2 {
+        border-radius: 100px;
+        -moz-border-radius: 100px;
+        -webkit-border-radius: 100px;
+        font-size: 30px;
+        padding: 10px 25px 10px 25px;
+        color: #2e69ad;
+        background: #f0f6fd;
+    }
+
+    .l3-s1 {
+        padding: 0px 10px;
+        color: #004f8c;
+        text-shadow: none;
+        font-size: 40px;
+        font-style: italic;
+        font-weight: bold;
+    }
+    
+    .l3-s2 {
+        padding: 0px 10px;
+        color: #f51111;
+        text-shadow: none;
+        font-size: 45px;
+        font-style: italic;
+        font-weight: bold;
+    }
+
+</style>
 
 <section class="colon1">
-    <!--
-    #################################
-        - THEMEPUNCH BANNER -
-    #################################
-    -->
-    <div class="tp-banner-container">
-        <div class="tp-banner">
-            <ul>
-                <!-- SLIDE  -->
-                <li data-transition="fade" data-slotamount="7" data-masterspeed="1500">
-                    <!-- MAIN IMAGE -->
-                    <!-- LAYERS -->
-                    <img src="~/images/move1.jpg" alt="slidebg1" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
 
-                    <!-- LAYER NR. 0 -->
-                    <div class="tp-caption medium_bg_asbestos skewfromleft customout"
-                         data-x="500" data-hoffset="40"
-                         data-y="100"
-                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-                         data-speed="500"
-                         data-start="800"
-                         data-easing="Back.easeOut"
-                         data-endspeed="500"
-                         data-endeasing="Power4.easeIn"
-                         data-captionhidden="on"
-                         style="z-index: 4">
-                        这里也可以添加文字，位置，都可以自定义
-                    </div>
-                    <div class="tp-caption medium_bg_asbestos skewfromleft customout"
-                         data-x="500" data-hoffset="40"
-                         data-y="140"
-                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-                         data-speed="500"
-                         data-start="800"
-                         data-easing="Back.easeOut"
-                         data-endspeed="500"
-                         data-endeasing="Power4.easeIn"
-                         data-captionhidden="on"
-                         style="z-index: 4">
-                        图片原始高度是310像素. 现在拉升到了500像素。最好提供500像素高度的图片，宽度是1440。
-                    </div>
+    <!--LayerSlider begin-->
 
-                    <!-- LAYER NR. 1 -->
-                    <div class="tp-caption medium_bg_asbestos skewfromleft customout"
-                         data-x="left" data-hoffset="100"
-                         data-y="100"
-                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-                         data-speed="500"
-                         data-start="800"
-                         data-easing="Back.easeOut"
-                         data-endspeed="500"
-                         data-endeasing="Power4.easeIn"
-                         data-captionhidden="on"
-                         style="z-index: 4">
-                        &nbsp;&nbsp;节能&nbsp;&nbsp;
-                    </div>
 
-                    <!-- LAYER NR. 2 -->
-                    <div class="tp-caption medium_bg_asbestos skewfromleft customout"
-                         data-x="left" data-hoffset="100"
-                         data-y="170"
-                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-                         data-speed="500"
-                         data-start="1000"
-                         data-easing="Back.easeOut"
-                         data-endspeed="500"
-                         data-endeasing="Power4.easeIn"
-                         data-captionhidden="on"
-                         style="z-index: 4">
-                        自动化霜                        
-                    </div>
-                    <!-- LAYER NR. 3 -->
-                    <div class="tp-caption medium_bg_asbestos skewfromleft customout"
-                         data-x="left" data-hoffset="100"
-                         data-y="240"
-                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-                         data-speed="500"
-                         data-start="1200"
-                         data-easing="Back.easeOut"
-                         data-endspeed="500"
-                         data-endeasing="Power4.easeIn"
-                         data-captionhidden="on"
-                         style="z-index: 4">
-                        &nbsp;&nbsp;安全&nbsp;&nbsp;
-                    </div>
-                    <!-- LAYER NR. 4 -->
-                    <div class="tp-caption medium_bg_asbestos skewfromleft customout"
-                         data-x="left" data-hoffset="100"
-                         data-y="310"
-                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-                         data-speed="500"
-                         data-start="1400"
-                         data-easing="Back.easeOut"
-                         data-endspeed="500"
-                         data-endeasing="Power4.easeIn"
-                         data-captionhidden="on"
-                         style="z-index: 4">
-                        模块化控制功能
-                    </div>
-                    <!-- LAYER NR. 5 -->
-                    <div class="tp-caption medium_bg_asbestos skewfromleft customout"
-                         data-x="left" data-hoffset="100"
-                         data-y="380"
-                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-                         data-speed="500"
-                         data-start="1600"
-                         data-easing="Back.easeOut"
-                         data-endspeed="500"
-                         data-endeasing="Power4.easeIn"
-                         data-captionhidden="on"
-                         style="z-index: 4">
-                        &nbsp;&nbsp;简便&nbsp;&nbsp;
-                    </div>
+    <div id="layerslider-container">
 
-                    <!-- LAYER NR. 1 -->
-                    <div class="tp-caption medium_bg_asbestos skewfromleft customout"
-                         data-x="right" data-hoffset="-100"
-                         data-y="100"
-                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-                         data-speed="500"
-                         data-start="2200"
-                         data-easing="Back.easeOut"
-                         data-endspeed="500"
-                         data-endeasing="Power4.easeIn"
-                         data-captionhidden="on"
-                         style="z-index: 4">
-                        &nbsp;&nbsp;耐用&nbsp;&nbsp;
-                    </div>
+        <div id="layerslider" style="width: 1440px; height: 500px; margin: 0px auto;">
+            <div class="ls-layer" style="slidedelay: 7000;">
+                <img src="~/images/move1.jpg" class="ls-bg">
 
-                    <!-- LAYER NR. 2 -->
-                    <div class="tp-caption medium_bg_asbestos skewfromleft customout"
-                         data-x="right" data-hoffset="-100"
-                         data-y="170"
-                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-                         data-speed="500"
-                         data-start="2400"
-                         data-easing="Back.easeOut"
-                         data-endspeed="500"
-                         data-endeasing="Power4.easeIn"
-                         data-captionhidden="on"
-                         style="z-index: 4">
-                        &nbsp;&nbsp;省钱&nbsp;&nbsp;
-                    </div>
-                    <!-- LAYER NR. 3 -->
-                    <div class="tp-caption medium_bg_asbestos skewfromleft customout"
-                         data-x="right" data-hoffset="-100"
-                         data-y="240"
-                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-                         data-speed="500"
-                         data-start="2600"
-                         data-easing="Back.easeOut"
-                         data-endspeed="500"
-                         data-endeasing="Power4.easeIn"
-                         data-captionhidden="on"
-                         style="z-index: 4">
-                        自动定时开机功能
-                    </div>
-                    <!-- LAYER NR. 4 -->
-                    <div class="tp-caption medium_bg_asbestos skewfromleft customout"
-                         data-x="right" data-hoffset="-100"
-                         data-y="310"
-                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-                         data-speed="500"
-                         data-start="2800"
-                         data-easing="Back.easeOut"
-                         data-endspeed="500"
-                         data-endeasing="Power4.easeIn"
-                         data-captionhidden="on"
-                         style="z-index: 4">
-                        &nbsp;&nbsp;环保&nbsp;&nbsp;
-                    </div>
-                    <!-- LAYER NR. 5 -->
-                    <div class="tp-caption medium_bg_asbestos skewfromleft customout"
-                         data-x="right" data-hoffset="-100"
-                         data-y="380"
-                         data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.75;scaleY:0.75;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-                         data-speed="500"
-                         data-start="3000"
-                         data-easing="Back.easeOut"
-                         data-endspeed="500"
-                         data-endeasing="Power4.easeIn"
-                         data-captionhidden="on"
-                         style="z-index: 4">
-                        适用范围广
-                    </div>
+                <h1 class="ls-s5 l1-s1" style="top:180px; left: 150px; slidedirection : top;">
+                    节能科技
+                </h1>
+                <h1 class="ls-s2 l1-s1b" style="top:180px; left: 150px; slidedirection : fade; slideoutdirection : fade;durationin : 1700; durationout : 2700; easingin : easeInOutQuad; easingout : easeInOutQuad; delayin : 1500; showuntil : 1600;">
+                    节能科技
+                </h1>
+                <h1 class="ls-s2 l1-s2" style="top:165px; left: 412px; slidedirection : top;  durationin : 2000; durationout : 1500; easingin : easeOutElastic; easingout : easeInOutQuint; delayin : 1500;">
+                    畅想舒适生活
+                </h1>
+                <h1 class="ls-s2 l1-s2b" style="top:165px; left: 412px; slidedirection : fade; slideoutdirection : fade; durationin : 1700; durationout : 2700; easingin : easeInOutQuad; easingout : easeInOutQuad; delayin : 3500; showuntil : 600;">
+                    畅想舒适生活
+                </h1>
+                <img class="ls-s2" id="sss" src="~/images/product-family.png" style="top: 110px; left: 1000px; slidedirection: top; delayin: 2000; slidedirection : fade; slideoutdirection : fade; easingin : easeOutQuint; scalein : 3; scaleout : 3;">
+                <h2 class="ls-s2 l1-s3" style="top: 330px; left: 200px; slidedirection: left; durationin: 2000; durationout: 1000; easingin: easeOutElastic; easingout: easeInOutQuint; delayin: 2000; showuntil: 1700;">
+                    超节能
+                </h2>
+                <h2 class="ls-s3 l1-s3" style="top: 330px; left: 327px; slidedirection: top; durationin: 1500; durationout: 1000; easingin: easeOutBack; easingout: easeInOutQuint; delayin: 2500; showuntil: 2300; ">
+                    超安全
+                </h2>
+                <h2 class="ls-s2 l1-s3" style="top: 330px; left: 454px; slidedirection: right; durationin: 1000; durationout: 1000; delayin: 2000; showuntil: 2000; ">
+                    超舒适
+                </h2>
 
-                </li>
+                <h5 class="ls-s3 l1-s3" style="top: 330px; left: 200px; slidedirection : fade; slideoutdirection : fade; easingin : easeOutQuint; delayin : 6500; scalein : 3; scaleout : 3;">
+                    超节能 超安全 超舒适
+                </h5>
+            </div>
 
-                <li data-transition="boxslide" data-slotamount="7" data-masterspeed="1500">
-                    <!-- MAIN IMAGE -->
-                    <!-- LAYERS -->
-                    <img src="~/images/move2.jpg" alt="slidebg1" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
 
-                    
-                </li>
 
-                <li data-transition="boxslide" data-slotamount="7" data-masterspeed="1500">
-                    <!-- MAIN IMAGE -->
-                    <!-- LAYERS -->
-                    <img src="~/images/move3.jpg" alt="slidebg1" data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
+            <div class="ls-layer" style="slidedelay: 5000; transition2d: 76,77,78,79;">
+                <img src="~/images/move2.jpg" class="ls-bg" alt="Slide background">
 
-                </li>
-            </ul>
+                <h5 class="ls-s-1 l2-plus1" style="top:120px; left: 70px; slidedirection : fade; slideoutdirection : fade; durationin : 750; durationout : 750; easingin : easeOutQuint; rotatein : 90; rotateout : 90; scalein : .5; scaleout : .5;">
+                    +
+                </h5>
+                <h5 class="ls-s1 l2-text1" style="top:126px; left: 155px; slidedirection : left; slideoutdirection : left; durationout : 750; easingin : easeOutBack; scalein : .1; scaleout : .1;">
+                    节能
+                </h5>
+
+                <h5 class="ls-s-1 l2-plus1" style="top: 120px; left: 270px; slidedirection: fade; slideoutdirection: fade; durationin: 750; durationout: 750; easingin: easeOutQuint; delayin: 2500; rotatein: 90; rotateout: 90; scalein: .5; scaleout: .5;">
+                    +
+                </h5>
+                <h5 class="ls-s1 l2-text1" style="top: 126px; left: 355px; slidedirection: left; slideoutdirection: left; durationout: 750; easingin: easeOutBack; delayin: 2500; scalein: .1; scaleout: .1;">
+                    耐用
+                </h5>
+
+                <h5 class="ls-s-1 l2-plus1" style="top: 180px; left: 70px; slidedirection: fade; slideoutdirection: fade; durationin: 750; durationout: 750; easingin: easeOutQuint; delayin: 500; rotatein: 90; rotateout: 90; scalein: .5; scaleout: .5;">
+                    +
+                </h5>
+                <h5 class="ls-s1 l2-text1" style="top: 186px; left: 155px; slidedirection: left; slideoutdirection: left; durationout: 750; easingin: easeOutBack; delayin: 500; scalein: .1; scaleout: .1; ">
+                    省钱
+                </h5>
+
+                <h5 class="ls-s-1 l2-plus1" style="top: 180px; left: 270px; slidedirection: fade; slideoutdirection: fade; durationin: 750; durationout: 750; easingin: easeOutQuint; delayin: 3000; rotatein: 90; rotateout: 90; scalein: .5; scaleout: .5;">
+                    +
+                </h5>
+                <h5 class="ls-s1 l2-text1" style="top: 186px; left: 355px; slidedirection: left; slideoutdirection: left; durationout: 750; easingin: easeOutBack; delayin: 3000; scalein: .1; scaleout: .1; ">
+                    自动化霜
+                </h5>
+
+                <h5 class="ls-s-1 l2-plus1" style="top: 240px; left: 70px; slidedirection: fade; slideoutdirection: fade; durationin: 750; durationout: 750; easingin: easeOutQuint; delayin: 1000; rotatein: 90; rotateout: 90; scalein: .5; scaleout: .5;">
+                    +
+                </h5>
+                <h5 class="ls-s1 l2-text1" style="top: 246px; left: 155px; slidedirection: left; slideoutdirection: left; durationout: 750; easingin: easeOutBack; delayin: 1000; scalein: .1; scaleout: .1; ">
+                    安全
+                </h5>
+
+                <h5 class="ls-s-1 l2-plus1" style="top: 240px; left: 270px; slidedirection: fade; slideoutdirection: fade; durationin: 750; durationout: 750; easingin: easeOutQuint; delayin: 3500; rotatein: 90; rotateout: 90; scalein: .5; scaleout: .5;">
+                    +
+                </h5>
+                <h5 class="ls-s1 l2-text1" style="top: 246px; left: 355px; slidedirection: left; slideoutdirection: left; durationout: 750; easingin: easeOutBack; delayin: 3500; scalein: .1; scaleout: .1; ">
+                    自动定时开机功能
+                </h5>
+
+                <h5 class="ls-s-1 l2-plus1" style="top: 300px; left: 70px; slidedirection: fade; slideoutdirection: fade; durationin: 750; durationout: 750; easingin: easeOutQuint; delayin: 1500; rotatein: 90; rotateout: 90; scalein: .5; scaleout: .5;">
+                    +
+                </h5>
+                <h5 class="ls-s1 l2-text1" style="top: 306px; left: 155px; slidedirection: left; slideoutdirection: left; durationout: 750; easingin: easeOutBack; delayin: 1500; scalein: .1; scaleout: .1; ">
+                    环保
+                </h5>
+
+                <h5 class="ls-s-1 l2-plus1" style="top: 300px; left: 270px; slidedirection: fade; slideoutdirection: fade; durationin: 750; durationout: 750; easingin: easeOutQuint; delayin: 4000; rotatein: 90; rotateout: 90; scalein: .5; scaleout: .5;">
+                    +
+                </h5>
+                <h5 class="ls-s1 l2-text1" style="top: 306px; left: 355px; slidedirection: left; slideoutdirection: left; durationout: 750; easingin: easeOutBack; delayin: 4000; scalein: .1; scaleout: .1; ">
+                    模块化控制功能
+                </h5>
+
+                <h5 class="ls-s-1 l2-plus1" style="top: 360px; left: 70px; slidedirection: fade; slideoutdirection: fade; durationin: 750; durationout: 750; easingin: easeOutQuint; delayin: 2000; rotatein: 90; rotateout: 90; scalein: .5; scaleout: .5;">
+                    +
+                </h5>
+                <h5 class="ls-s1 l2-text1" style="top: 366px; left: 155px; slidedirection: left; slideoutdirection: left; durationout: 750; easingin: easeOutBack; delayin: 2000; scalein: .1; scaleout: .1; ">
+                    简便
+                </h5>
+
+                <h5 class="ls-s-1 l2-plus1" style="top: 360px; left: 270px; slidedirection: fade; slideoutdirection: fade; durationin: 750; durationout: 750; easingin: easeOutQuint; delayin: 4500; rotatein: 90; rotateout: 90; scalein: .5; scaleout: .5;">
+                    +
+                </h5>
+                <h5 class="ls-s1 l2-text1" style="top: 366px; left: 355px; slidedirection: left; slideoutdirection: left; durationout: 750; easingin: easeOutBack; delayin: 4500; scalein: .1; scaleout: .1; ">
+                    适用范围广
+                </h5>
+
+                <h5 class="ls-s-1 l2-text2" style="top: 380px; left: 990px; slidedirection: fade; slideoutdirection: fade; durationin: 450; easingin: easeOutQuart; easingout: easeInQuart; delayin: 1250; scalein: 0; scaleou: 3; showuntil: 51;">
+                    商用型热泵
+                </h5>
+                <img class="ls-s2" src="~/images/product-business.png" style="top: 30px; left: 900px; slidedirection: top; slideoutdirection: right; durationin: 750; easingin: easeOutQuart; easingout: easeInQuart; delayin: 1000; showuntil: 1;">
+
+
+                <h5 class="ls-s-1 l2-text2" style="top: 380px; left: 990px; slidedirection: fade; slideoutdirection: fade; durationin: 450; easingin: easeOutQuart; easingout: easeInQuart; delayin: 3050; scalein: 0; scaleout: 3; showuntil: 51;">
+                    家用型热泵
+                </h5>
+                <img class="ls-s2" src="~/images/product-family.png" style="top: 30px; left: 920px; slidedirection: top; slideoutdirection: right; durationin: 750; easingin: easeOutQuart; easingout: easeInQuart; delayin: 2800; showuntil: 1; ">
+
+
+                <h5 class="ls-s-1 l2-text2" style="top: 380px; left: 990px; slidedirection: fade; slideoutdirection: fade; durationin: 450; easingin: easeOutQuart; easingout: easeInQuart; delayin: 4550; scalein: 0; scaleou: 3;">
+                    地源热泵
+                </h5>
+                <img class="ls-s2" src="~/images/product-ground.png" style="top: 100px; left: 900px; slidedirection: top; slideoutdirection: right; durationin: 750; easingin: easeOutQuart; easingout: easeInQuart; delayin: 4300;">
+
+
+            </div>
+
+
+
+            <div class="ls-layer" style="slidedelay: 5000; transition2d: 25;">
+                <img src="~/images/move3.jpg" class="ls-bg">
+
+                <h2 class="ls-s2 l3-s1" style="top: 60px; left: 550px; slidedirection: right; durationin: 2000; durationout: 1000; delayin: 500; easingin: easeOutQuint; scalein: 3; scaleout: 3; ">
+                    售后我们技术更精
+                </h2>
+                <h2 class="ls-s3 l3-s1" style="top: 60px; left: 900px; slidedirection: right; durationin: 1500; durationout: 1000; delayin: 1500; easingin: easeOutQuint; scalein: 3; scaleout: 3; ">
+                    速度更快
+                </h2>
+                <h2 class="ls-s2 l3-s1" style="top: 60px; left: 1090px; slidedirection: right; durationin: 1000; durationout: 1000; delayin: 2500; easingin: easeOutQuint; scalein: 3; scaleout: 3; ">
+                    价格更低
+                </h2>
+                <h5 class="ls-s3 l3-s2" style="top: 130px; left: 875px; slidedirection : fade; slideoutdirection : fade; easingin : easeOutQuint; delayin : 3500; scalein : 3; scaleout : 3;">
+                    24小时全天候待命
+                </h5>
+                <img class="ls-s2" id="sss" src="~/images/PhoneOffice.png" style="top: 266px; left: 900px; slidedirection: bottom; slideoutdirection: bottom; durationin: 750; durationout: 750; easingin: easeOutQuint; delayin: 1000; scalein: .5;">
+                <h5 class="ls-s-1 l3-s1" style="top: 260px; left: 1000px; slidedirection: bottom; slideoutdirection: bottom; durationin: 750; durationout: 750; easingin: easeOutQuint; delayin: 1000; scalein: .5;">
+                    13812755349
+                </h5>
+                <h5 class="ls-s-1 l3-s1" style="top: 310px; left: 1000px; slidedirection: bottom; slideoutdirection: bottom; durationin: 750; durationout: 750; easingin: easeOutQuint; delayin: 1000; scalein: .5; ">
+                    15050101075
+                </h5>
+            </div>
+
+
+
+
+
         </div>
+
     </div>
-    <!-- END REVOLUTION SLIDER -->
+        <!--LayerSlider end-->
+   
+
 </section>
 
 <section class="colon2">
@@ -343,6 +402,11 @@
 </section>
 
 @section Scripts {
-    @Scripts.Render("~/Content/rs-plugin/js/jquery.themepunch.plugins.min.js");
-    @Scripts.Render("~/Content/rs-plugin/js/jquery.themepunch.revolution.min.js");
+
+@Scripts.Render("~/Content/layerslider/jQuery/jquery-easing-1.3.js");
+@Scripts.Render("~/Content/layerslider/jQuery/jquery-transit-modified.js");
+
+@Scripts.Render("~/Content/layerslider/js/layerslider.transitions.js");
+@Scripts.Render("~/Content/layerslider/js/layerslider.kreaturamedia.jquery.js");
+
 }
