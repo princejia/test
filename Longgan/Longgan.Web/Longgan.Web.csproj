@@ -315,6 +315,7 @@
     <Content Include="images\02_colon.jpg" />
     <Content Include="images\02_slider.png" />
     <Content Include="images\03_slider.png" />
+    <Content Include="images\AfterSale.jpg" />
     <Content Include="images\an1.JPG" />
     <Content Include="images\an2.JPG" />
     <Content Include="images\AnoutLeft.png" />
@@ -361,6 +362,7 @@
     <Content Include="images\logo%402x.png" />
     <Content Include="images\logo.jpg" />
     <Content Include="images\logo.png" />
+    <Content Include="images\logo_new.png" />
     <Content Include="images\magnifier.png" />
     <Content Include="images\mc1.png" />
     <Content Include="images\mc10.jpg" />
@@ -380,9 +382,13 @@
     <Content Include="images\next.png" />
     <Content Include="images\next_a.png" />
     <Content Include="images\pattern.png" />
+    <Content Include="images\PhoneOffice.png" />
     <Content Include="images\preloader.gif" />
     <Content Include="images\prev.png" />
     <Content Include="images\prev_a.png" />
+    <Content Include="images\product-business.png" />
+    <Content Include="images\product-family.png" />
+    <Content Include="images\product-ground.png" />
     <Content Include="images\search.png" />
     <Content Include="images\side_nav_bg.png" />
     <Content Include="images\singleheader.png" />
@@ -395,6 +401,7 @@
     <Content Include="images\transparent.png" />
     <Content Include="images\tweet.png" />
     <Content Include="images\weixin.jpg" />
+    <Content Include="images\xq.png" />
     <Content Include="images\zoombox-close.png" />
     <Content Include="Scripts\application.js" />
     <Content Include="Scripts\bootstrap.js" />
