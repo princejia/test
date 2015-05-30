@@ -230,11 +230,12 @@
 	}
 
 	.header-wrapper {
-		background:#ffffff;
 		position:relative;
-		width:100%;
 		margin:0;
 		padding:0;
+        background: #ffffff url("../images/li.png") repeat-x scroll center bottom;       
+		top: 0;        
+		width: 100%;
 	}
 	
 	.header-wrapper-2 .jetmenu {margin:20px 0 0; border-top: 1px solid #F3F3F3;
@@ -3419,11 +3420,10 @@
 	}
 	
 	.shadow {
-		background: url(../images/singleheader.png) no-repeat scroll center -8px;
+		background: url(../images/singleheader.png) no-repeat scroll;        
 		top: 0;
 		content: "";
-		height: 20px;
-		left: 0;
+		height: 20px;            
 		position: absolute;
 		width: 100%;
 	}
