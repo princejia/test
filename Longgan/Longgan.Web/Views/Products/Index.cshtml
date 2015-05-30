@@ -25,11 +25,15 @@
             @Html.DisplayNameFor(model => model.IntroName)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.Type)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Created)
         </th>
         <th></th>
     </tr>
-    @{string filePath = System.Configuration.ConfigurationManager.AppSettings["fileRoot"];
+    @{
+        string filePath = VirtualPathUtility.ToAbsolute(System.Configuration.ConfigurationManager.AppSettings["fileRoot"]);
     }
     @foreach (var item in Model)
     {
@@ -44,17 +48,20 @@
 
                 @if (!string.IsNullOrEmpty(item.PicName))
                 {
-                    string picPath = string.Format("{0}\\Product\\{1}{2}", filePath, item.PicName, Path.GetExtension(item.PicName));
+                    string picPath = string.Format("{0}/{1}", filePath, item.PicName);
                     <img src="@picPath" style="width: 150px; height: 150px;" />
                 }
-                
+
             </td>
             <td>
                 @if (!string.IsNullOrEmpty(item.IntroName))
                 {
-                    string picPath = string.Format("{0}\\Product\\{1}{2}", filePath, item.IntroName, Path.GetExtension(item.IntroName));
+                    string picPath = string.Format("{0}/{1}", filePath, item.IntroName);
                     <img src="@picPath" style="width: 150px; height: 150px;" />
                 }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Created)

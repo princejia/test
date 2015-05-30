@@ -32,5 +32,7 @@ namespace Longgan.Web.Models
         public System.Data.Entity.DbSet<Longgan.Models.Home.New> News { get; set; }
 
         public System.Data.Entity.DbSet<Longgan.Models.Home.Product> Products { get; set; }
+
+        public System.Data.Entity.DbSet<Longgan.Models.Home.Message> Messages { get; set; }
     }
 }

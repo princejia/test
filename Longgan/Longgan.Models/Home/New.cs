@@ -21,7 +21,7 @@ namespace Longgan.Models.Home
         public string Content { get; set; }
 
         public int Hot { get; set; }
-
+        [Display(Name = "创建时间")]
         public DateTime Created { get; set; }
     }
 }

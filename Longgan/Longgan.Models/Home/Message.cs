@@ -27,7 +27,7 @@ namespace Longgan.Models.Home
         [Required(ErrorMessage = "内容不能为空"), StringLength(3000)]
         [Display(Name = "内容")]
         public string Content { get; set; }
-
+        [Display(Name = "留言时间")]
         public DateTime Created { get; set; }
     }
 }

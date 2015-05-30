@@ -17,11 +17,27 @@ namespace Longgan.Logics.Home
             return da.GetMessages();
         }
 
+        public Message GetMessage(string Id)
+        {
+            return da.GetMessage(Id);
+        }
+
         public void AddMessage(Message msg)
         {
             msg.Id = Guid.NewGuid().ToString();
             msg.Created = DateTime.Now;
             da.AddMessage(msg);
         }
+
+        public void UpdateMessage(Message n)
+        {
+            da.Update(n);
+        }
+
+        public void RemoveMessage(Message n)
+        {
+            da.Delete(n);
+        }
+
     }
 }

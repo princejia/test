@@ -23,6 +23,7 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("产品管理", "Index", "Products")</li>
                     <li>@Html.ActionLink("新闻管理", "Index", "News")</li>
+                    <li>@Html.ActionLink("留言管理", "Index", "Messages")</li>
                 </ul>
                 @*@Html.Partial("_LoginPartial")*@
             </div>
@@ -32,7 +33,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - 后台管理</p>
         </footer>
     </div>
 

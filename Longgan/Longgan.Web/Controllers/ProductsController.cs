@@ -51,15 +51,13 @@ namespace Longgan.Web.Controllers
         [HttpPost]
         public ActionResult Create([Bind(Include = "Id,Title,Content,PicName,IntroName,Created")] Product product, FormCollection fc)
         {
-            string filePath = ConfigurationManager.AppSettings["fileRoot"];
-            if (!Directory.Exists(filePath + "\\Product"))
+            string filePath = Server.MapPath(ConfigurationManager.AppSettings["fileRoot"]);
+
+            if (!Directory.Exists(filePath))
             {
-                Directory.CreateDirectory(filePath + "\\Product");
+                Directory.CreateDirectory(filePath);
             }
-            if (!Directory.Exists(filePath + "\\Intro"))
-            {
-                Directory.CreateDirectory(filePath + "\\Intro");
-            }
+
 
             if (ModelState.IsValid)
             {
@@ -67,7 +65,7 @@ namespace Longgan.Web.Controllers
                 if (!string.IsNullOrEmpty(filePic.FileName))
                 {
                     string fileName = "Product" + DateTime.Now.ToString("yyyyMMddhhmmss");
-                    string path = string.Format("{0}\\Product\\{1}{2}", filePath, fileName, Path.GetExtension(filePic.FileName));
+                    string path = string.Format("{0}\\{1}{2}", filePath, fileName, Path.GetExtension(filePic.FileName));
                     if (System.IO.File.Exists(path))
                     {
                         System.IO.File.Delete(path);
@@ -80,12 +78,12 @@ namespace Longgan.Web.Controllers
                 if (!string.IsNullOrEmpty(fileIntro.FileName))
                 {
                     string fileName = "Intro" + DateTime.Now.ToString("yyyyMMddhhmmss");
-                    string path = string.Format("{0}\\Intro\\{1}{2}", filePath, fileName, Path.GetExtension(fileIntro.FileName));
+                    string path = string.Format("{0}\\{1}{2}", filePath, fileName, Path.GetExtension(fileIntro.FileName));
                     if (System.IO.File.Exists(path))
                     {
                         System.IO.File.Delete(path);
                     }
-                    filePic.SaveAs(path);
+                    fileIntro.SaveAs(path);
                     product.IntroName = fileName + Path.GetExtension(fileIntro.FileName);
                 }
 
@@ -120,6 +118,50 @@ namespace Longgan.Web.Controllers
         {
             if (ModelState.IsValid)
             {
+                Product oriProduct = logic.GetProduct(product.Id);
+
+                string filePath = Server.MapPath(ConfigurationManager.AppSettings["fileRoot"]);
+
+                HttpPostedFileBase filePic = Request.Files["picProduct"];
+                if (!string.IsNullOrEmpty(filePic.FileName))
+                {
+                    string fileName = "Product" + DateTime.Now.ToString("yyyyMMddhhmmss") + Path.GetExtension(filePic.FileName);
+                    string path = string.Format("{0}\\{1}", filePath, fileName);
+                    if (System.IO.File.Exists(path))
+                    {
+                        System.IO.File.Delete(path);
+                    }
+                    filePic.SaveAs(path);
+                    product.PicName = fileName;
+
+                    //del Original
+                    string oriPath = string.Format("{0}\\{1}", filePath, oriProduct.PicName);
+                    if (System.IO.File.Exists(oriPath))
+                    {
+                        System.IO.File.Delete(oriPath);
+                    }
+                }
+
+                HttpPostedFileBase fileIntro = Request.Files["picIntro"];
+                if (!string.IsNullOrEmpty(fileIntro.FileName))
+                {
+                    string fileName = "Intro" + DateTime.Now.ToString("yyyyMMddhhmmss") + Path.GetExtension(fileIntro.FileName);
+                    string path = string.Format("{0}\\{1}", filePath, fileName);
+                    if (System.IO.File.Exists(path))
+                    {
+                        System.IO.File.Delete(path);
+                    }
+                    fileIntro.SaveAs(path);
+                    product.IntroName = fileName;
+
+                    //del Original
+                    string oriPath = string.Format("{0}\\{1}", filePath, oriProduct.IntroName);
+                    if (System.IO.File.Exists(oriPath))
+                    {
+                        System.IO.File.Delete(oriPath);
+                    }
+                }
+
                 logic.UpdateProduct(product);
                 return RedirectToAction("Index");
             }

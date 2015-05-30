@@ -1,4 +1,4 @@
-﻿@model Longgan.Models.Home.Product
+﻿@model Longgan.Models.Home.Message
 
 @{
     ViewBag.Title = "Delete";
@@ -9,9 +9,33 @@
 
 <h3>确定删除?</h3>
 <div>
-    <h4>产品</h4>
+    <h4>留言</h4>
     <hr />
     <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
         <dt>
             @Html.DisplayNameFor(model => model.Title)
         </dt>
@@ -26,22 +50,6 @@
 
         <dd>
             @Html.DisplayFor(model => model.Content)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PicName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PicName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.IntroName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.IntroName)
         </dd>
 
         <dt>
