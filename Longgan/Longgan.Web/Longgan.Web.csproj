@@ -248,6 +248,7 @@
     <Content Include="Content\layerslider\skins\noskin\skin.png" />
     <Content Include="Content\menu.css" />
     <Content Include="Content\mightyslider.css" />
+    <Content Include="Content\nivo-slider.css" />
     <Content Include="Content\rs-plugin\assets\arrowleft.png" />
     <Content Include="Content\rs-plugin\assets\arrowright.png" />
     <Content Include="Content\rs-plugin\assets\arrow_large_left.png" />
@@ -421,11 +422,6 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="Content\layerslider\.DS_Store" />
-    <Content Include="Content\layerslider\css\.DS_Store" />
-    <Content Include="Content\layerslider\jQuery\.DS_Store" />
-    <Content Include="Content\layerslider\js\.DS_Store" />
-    <Content Include="Content\layerslider\skins\.DS_Store" />
     <None Include="Properties\PublishProfiles\LGRelease.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\countdown.js" />
