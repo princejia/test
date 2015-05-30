@@ -80,5 +80,10 @@ namespace Longgan.Web.Controllers
         {
             return View();
         }
+
+        public ActionResult AfterSale()
+        {
+            return View();
+        }
     }
 }
